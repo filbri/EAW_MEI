@@ -14,9 +14,9 @@ Contexto:
 Pretende-se a realização de uma Aplicação Web que terá como utilizadores alvo o aluno e os três elementos intervenientes do seu triangulo pedagógico (professor, enc. de educação e direção). Existem vários tipos de utilizador. A cada tipo de utilizador estará associada uma área com as funcionalidades correspondentes.
 A aplicação deverá possibilitar ao professor, a inserção de fichas de trabalho/exercícios, que serão dispostos para resolução a um aluno específico ou a um conjunto de alunos. As fichas de trabalho/exercícios terão uma data limite de realização definida pelo professor.
 A realização de exercícios é apenas destinada aos alunos. Terminado o exercício o aluno recebe uma nota provisoria (podendo esta ser revista pelo professor). Todos os exercícios devem ficar guardados, podendo ser consultados pelo aluno e elementos do triângulo pedagógico.
-            A aplicação deve incluir um gestor de notificações que permite o envio, consulta e eliminação de notificações a todos os utilizadores (excepto o aluno).
-            Aos utilizadores será mostrado um resumo estatístico de todas as operações realizadas no sistema. Este resumo será adequado a cada tipo de utilizador e aos dados a si inerentes.
-            A responsibilidade da gestão dos utilizadores (inserção, remoção e actualização) será da direção.
+A aplicação deve incluir um gestor de notificações que permite o envio, consulta e eliminação de notificações a todos os utilizadores (excepto o aluno).
+Aos utilizadores será mostrado um resumo estatístico de todas as operações realizadas no sistema. Este resumo será adequado a cada tipo de utilizador e aos dados a si inerentes.
+A responsibilidade da gestão dos utilizadores (inserção, remoção e actualização) será da direção.
 
 
 
