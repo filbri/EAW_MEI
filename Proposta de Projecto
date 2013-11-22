@@ -1,22 +1,21 @@
-Projecto "TePeCe"
-
-Descrição do projecto: 
-
-"O único lugar onde o sucesso vem antes do trabalho é no dicionário." Albert Einstein
-
-Na base da educação de uma criança existe um triângulo pedagógico essencial no processo da sua aprendizagem. Esse triângulo é composto pelo Encarregado de Educação, Professor e Diretores Escolares. Todos estes atores têm um papel complementar e colaborativo na construção, monitorização, avaliação de exercícios e trabalhos realizados pela criança. O Projecto “TePeCe” assenta o seu grande objetivo nesta premissa, de um maior envolvimento destes atores, utilizando a Web como meio duma união de interesses.
+Projeto "TePeCe"
 
 
+Descrição do projeto: 
+
+"Quem cedo e bem aprende, tarde ou nunca se esquece." William Shakespeare
+
+Na base da educação de uma criança existe um triângulo pedagógico essencial no processo da sua aprendizagem. Esse triângulo é composto pelo Encarregado de Educação, Professor e Diretores Escolares. Todos estes atores têm um papel complementar e colaborativo na construção, monitorização, avaliação de exercícios e trabalhos realizados pela criança. O Projeto “TePeCe” assenta o seu grande objetivo nesta premissa, de um maior envolvimento destes atores, utilizando a Web como meio duma união de interesses.
 
 
 Contexto:
 
-Pretende-se a realização de uma Aplicação Web que terá como utilizadores alvo o aluno e os três elementos intervenientes do seu triangulo pedagógico (professor, enc. de educação e direção). Existem vários tipos de utilizador. A cada tipo de utilizador estará associada uma área com as funcionalidades correspondentes.
+Pretende-se a realização de uma Aplicação Web que terá como utilizadores alvo o aluno e os três elementos intervenientes do seu triângulo pedagógico (professor, enc. de educação e direção). Existem vários tipos de utilizador. A cada tipo de utilizador estará associada uma área com as funcionalidades correspondentes.
 A aplicação deverá possibilitar ao professor, a inserção de fichas de trabalho/exercícios, que serão dispostos para resolução a um aluno específico ou a um conjunto de alunos. As fichas de trabalho/exercícios terão uma data limite de realização definida pelo professor.
 A realização de exercícios é apenas destinada aos alunos. Terminado o exercício o aluno recebe uma nota provisoria (podendo esta ser revista pelo professor). Todos os exercícios devem ficar guardados, podendo ser consultados pelo aluno e elementos do triângulo pedagógico.
-A aplicação deve incluir um gestor de notificações que permite o envio, consulta e eliminação de notificações a todos os utilizadores (excepto o aluno).
+A aplicação deve incluir um gestor de notificações que permite o envio, consulta e eliminação de notificações a todos os utilizadores (exceto o aluno).
 Aos utilizadores será mostrado um resumo estatístico de todas as operações realizadas no sistema. Este resumo será adequado a cada tipo de utilizador e aos dados a si inerentes.
-A responsibilidade da gestão dos utilizadores (inserção, remoção e actualização) será da direção.
+A responsabilidade da gestão dos utilizadores (inserção, remoção e atualização) será da direção.
 
 
 
@@ -39,6 +38,14 @@ Direção:
 À Direção cabe-lhe responder às notificações dos Professores e do Encarregado de Educação, e terá acesso a estatísticas personalizadas de todas as avaliações realizadas na escola.
 
 
+Constituição do grupo:
+
+Team Leader: Filipe Pereira de Brito (pg12705)
+Telma Ferreira Correia (pg25263)
+Miguel Teixeira da Rede Vale (pg19806)
+Rui Alexandre Teixeira da Silva (a54712)
+
+Link para o projeto(GitHub): https://github.com/filbri/EAW_MEI/
 
 
 ANEXO
