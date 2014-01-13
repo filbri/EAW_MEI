@@ -1,0 +1,4 @@
+Criar modelo de dados (modelo ER)
+Qualquer ferramenta (preferencialmente WebRatio)
+Meter no GitHub
+Data limite: 17 de Janeiro
