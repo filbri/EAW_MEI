@@ -1,0 +1,18 @@
+!SESSION 2014-01-16 18:57:56.582 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_PT
+Command-line arguments:  -data C:\Users\hp\Documents\GitHub\EAW_MEI\Modelo de Dados -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.webratio.commons.startup 4 0 2014-01-16 18:58:34.046
+!MESSAGE Error computing usage statistics
+!STACK 0
+java.lang.NullPointerException
+	at com.webratio.ide.store.internal.contributors.UsageStatisticsContributor.getName(UsageStatisticsContributor.java:26)
+	at com.webratio.commons.startup.internal.data.UsageStatisticsData.getRequestCode(UsageStatisticsData.java:46)
+	at com.webratio.commons.startup.internal.server.UsageStatisticsServerHandler.generateRequestCode(UsageStatisticsServerHandler.java:78)
+	at com.webratio.commons.startup.internal.server.UsageStatisticsServerHandler.sendRequest(UsageStatisticsServerHandler.java:31)
+	at com.webratio.commons.startup.UsageStatisticsManager.sendUsageStatistics(UsageStatisticsManager.java:260)
+	at com.webratio.ide.ui.jobs.WRInitJob$RealJob$1.run(WRInitJob.java:120)
+	at java.lang.Thread.run(Thread.java:722)

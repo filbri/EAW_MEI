@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.webratio.ide.ui.actions.MoveElementsAction.chooseTargetElementDialog">
+	</section>
+	<section name="com.webratio.ide.ui.grid.views.GridViewPage.Settings">
+		<item value="NONE" key="AUTO_HORIZONTAL_FIT_PREFERENCE"/>
+	</section>
+</section>
