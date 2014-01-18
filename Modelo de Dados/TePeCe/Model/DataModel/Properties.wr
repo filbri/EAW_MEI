@@ -1,15 +1,18 @@
 <DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="815" gr:y="5" gr:hideAttributes="false" attributeOrder="userOID userName password email">
+  <Entity id="User" name="User" duration="persistent" gr:x="815" gr:y="-25" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att20 User#att21 User#att36">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
     <Attribute name="password" id="password" type="password"/>
     <Attribute name="email" id="email" type="string"/>
+    <Attribute id="User#att20" name="BI" type="string"/>
+    <Attribute id="User#att21" name="C&#243;digoPostal" type="string"/>
+    <Attribute id="User#att36" name="Localidade" type="string"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="465" gr:y="25" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
     <Attribute name="groupName" id="groupName" type="string"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="145" gr:y="15" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="155" gr:y="15" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
     <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
     <Attribute name="moduleID" id="moduleID" type="string"/>
     <Attribute name="moduleName" id="moduleName" type="string"/>
@@ -57,16 +60,18 @@
     <Attribute id="ent8#att28" name="PiorNota" type="integer"/>
     <Attribute id="ent8#att29" name="Varia&#231;&#227;o" type="integer"/>
   </Entity>
-  <Entity gr:x="1195" gr:y="150" id="ent9" name="Notifica&#231;&#227;o" duration="persistent" attributeOrder="ent9#att9 ent9#att23 ent9#att24 ent9#att30">
+  <Entity gr:x="1195" gr:y="150" id="ent9" name="Notifica&#231;&#227;o" duration="persistent" attributeOrder="ent9#att9 ent9#att23 ent9#att24 ent9#att30 ent9#att1">
     <Attribute id="ent9#att9" key="true" name="oid" type="integer"/>
-    <Attribute id="ent9#att23" name="Texto" type="string"/>
+    <Attribute id="ent9#att23" name="Mensagem" type="string"/>
     <Attribute id="ent9#att24" name="Assunto" type="string"/>
     <Attribute id="ent9#att30" name="NomeRemetente" type="string"/>
+    <Attribute id="ent9#att1" name="DataLeitura" type="date"/>
   </Entity>
-  <Entity gr:x="315" gr:y="325" id="ent10" name="Exercicio" duration="persistent" attributeOrder="ent10#att10 ent10#att22 ent10#att3">
+  <Entity gr:x="315" gr:y="325" id="ent10" name="Exercicio" duration="persistent" attributeOrder="ent10#att10 ent10#att22 ent10#att3 ent10#att2">
     <Attribute id="ent10#att10" key="true" name="oid" type="integer"/>
     <Attribute id="ent10#att22" name="Designa&#231;&#227;o" type="string"/>
     <Attribute id="ent10#att3" name="Enunciado" type="string"/>
+    <Attribute id="ent10#att2" name="DataCria&#231;&#227;o" type="date"/>
   </Entity>
   <Entity gr:x="10" gr:y="335" id="ent11" name="Exercicio Individual" duration="persistent" attributeOrder="ent11#att11">
     <Attribute id="ent11#att11" key="true" name="oid" type="integer"/>
