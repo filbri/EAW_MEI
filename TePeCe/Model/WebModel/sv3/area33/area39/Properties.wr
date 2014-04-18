@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="200" id="sv3#area33#area39" name="Novo Exercicio" landmark="true" defaultPage="sv3#area33#area39#page41">
+  <OperationUnits>
+    <CreateUnit gr:x="185" gr:y="35" id="sv3#area33#area39#cru4" name="Criar Exercicio" entity="ent10">
+      <OKLink id="sv3#area33#area39#cru4#oln2" name="OKFlow2" to="sv3#area33#area38#page40#pwu2" automaticCoupling="true" gr:bendpoints="-96,15,84,15"/>
+      <KOLink id="sv3#area33#area39#cru4#kln2" name="KOFlow2" to="sv3#area33#area39#page41#enu4" automaticCoupling="true" gr:bendpoints="-96,-15,84,-15"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

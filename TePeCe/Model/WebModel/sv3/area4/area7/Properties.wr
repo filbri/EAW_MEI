@@ -1,0 +1,11 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area4#area7" name="Eliminar" defaultPage="sv3#area4#area7#page12" landmark="true" gr:x="70" gr:y="515">
+  <OperationUnits>
+    <DeleteUnit id="sv3#area4#area7#dlu2" name="Apagar Notifica&#231;&#227;o" gr:x="0" gr:y="25" entity="ent9">
+      <Selector id="sv3#area4#area7#dlu2#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area4#area7#dlu2#su15#kcond15" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area4#area7#dlu2#oln14" name="OKFlow1" to="sv3#area4#area7#page12#mciu3" automaticCoupling="true" gr:bendpoints="129,-13,-116,-18"/>
+      <KOLink id="sv3#area4#area7#dlu2#kln15" name="KOFlow1" to="sv3#area4#area7#page12#mciu3" automaticCoupling="true" gr:bendpoints="154,17,-141,12"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

@@ -1,0 +1,52 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="790" id="sv2#area20#area31" name="Relacionar" landmark="true" defaultPage="sv2#area20#area31#page36">
+  <OperationUnits>
+    <ConnectUnit gr:x="330" gr:y="20" id="sv2#area20#area31#cnu1" name="Connect1" relationship="rel5#role10">
+      <SourceSelector id="sv2#area20#area31#cnu1#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu1#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#cnu1#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu1#su12#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+    <ConnectUnit gr:x="325" gr:y="145" id="sv2#area20#area31#cnu2" name="Connect2" relationship="rel3#role5">
+      <SourceSelector id="sv2#area20#area31#cnu2#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu2#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#cnu2#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu2#su23#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+    <ConnectUnit gr:x="315" gr:y="265" id="sv2#area20#area31#cnu3" name="Connect3" relationship="rel4#role7">
+      <SourceSelector id="sv2#area20#area31#cnu3#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu3#su24#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#cnu3#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#cnu3#su25#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+    <DisconnectUnit gr:x="0" gr:y="0" id="sv2#area20#area31#dcnu1" name="Disconnect1" relationship="rel5#role10">
+      <SourceSelector id="sv2#area20#area31#dcnu1#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu1#su26#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#dcnu1#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu1#su27#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+    <DisconnectUnit gr:x="0" gr:y="140" id="sv2#area20#area31#dcnu2" name="Disconnect2" relationship="rel3#role5">
+      <SourceSelector id="sv2#area20#area31#dcnu2#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu2#su28#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#dcnu2#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu2#su29#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+    <DisconnectUnit gr:x="0" gr:y="265" id="sv2#area20#area31#dcnu3" name="Disconnect3" relationship="rel4#role7">
+      <SourceSelector id="sv2#area20#area31#dcnu3#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu3#su30#kcond30" name="KeyCondition30" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area20#area31#dcnu3#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#area31#dcnu3#su31#kcond31" name="KeyCondition31" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+  </OperationUnits>
+</Area>

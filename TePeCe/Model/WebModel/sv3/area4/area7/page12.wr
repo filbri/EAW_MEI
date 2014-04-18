@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area4#area7#page12" name="Eliminar Notifica&#231;&#245;es" gr:x="245" gr:y="0">
+  <ContentUnits>
+    <MultiChoiceIndexUnit id="sv3#area4#area7#page12#mciu3" name="CheckableList2" linkOrder="sv3#area4#area7#page12#mciu3#ln39" gr:x="0" gr:y="0" entity="ent9" displayAttributes="ent9#att24">
+      <Link id="sv3#area4#area7#page12#mciu3#ln39" name="Flow1" to="sv3#area4#area7#dlu2" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiChoiceIndexUnit>
+    <GetUnit id="sv3#area4#area7#page12#gtu9" name="Get User" gr:x="0" gr:y="245" contextParameters="UserCtxParam">
+      <Link id="sv3#area4#area7#page12#gtu9#ln40" name="Flow33" to="sv3#area4#area7#page12#seu9" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <SelectorUnit id="sv3#area4#area7#page12#seu9" name="Selecionar Notifica&#231;&#245;es" gr:x="20" gr:y="125" entity="ent9">
+      <Link id="sv3#area4#area7#page12#seu9#ln41" name="Flow34" to="sv3#area4#area7#page12#mciu3" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#area7#page12#mciu3">
+          <layout:Link link="sv3#area4#area7#page12#mciu3#ln39"/>
+          <layout:Attribute attribute="ent9#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

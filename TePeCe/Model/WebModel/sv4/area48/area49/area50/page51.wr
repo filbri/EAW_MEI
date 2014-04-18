@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area48#area49#area50#page51" name="Seleccionar Exercicio" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="315" gr:y="5" id="sv4#area48#area49#area50#page51#pwu7" name="Selecionar" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="ent10#att22 ent10#att2" linkOrder="sv4#area48#area49#area50#page51#pwu7#ln45 sv4#area48#area49#area50#page51#pwu7#ln46">
+      <Link id="sv4#area48#area49#area50#page51#pwu7#ln45" name="Consultar" to="sv4#area48#area49#area51#page52#dau4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv4#area48#area49#area50#page51#pwu7#ln46" name="Realizar" to="sv4#area48#area49#area52#page53#enu5" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="0" id="sv4#area48#area49#area50#page51#gtu10" name="Get User" contextParameters="UserCtxParam">
+      <Link id="sv4#area48#area49#area50#page51#gtu10#ln47" name="Flow47" to="sv4#area48#area49#area50#page51#seu10" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="165" gr:y="5" id="sv4#area48#area49#area50#page51#seu10" name="Selector10" entity="ent10">
+      <Link id="sv4#area48#area49#area50#page51#seu10#ln48" name="Flow48" to="sv4#area48#area49#area50#page51#pwu7" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area48#area49#area50#page51#pwu7">
+          <layout:Attribute attribute="ent10#att22"/>
+          <layout:Attribute attribute="ent10#att2"/>
+          <layout:Link link="sv4#area48#area49#area50#page51#pwu7#ln45"/>
+          <layout:Link link="sv4#area48#area49#area50#page51#pwu7#ln46"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

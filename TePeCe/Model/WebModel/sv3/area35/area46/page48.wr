@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area35#area46#page48" name="Consulta de Utilizadores" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv3#area35#area46#page48#inu6" name="Listagem de Utilizadores" gr:x="0" gr:y="10" entity="User" displayAttributes="userName" linkOrder="sv3#area35#area46#page48#inu6#ln11">
+      <Link id="sv3#area35#area46#page48#inu6#ln11" name="Flow11" to="sv3#area35#area46#page48#dau2" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <DataUnit gr:x="280" gr:y="0" id="sv3#area35#area46#page48#dau2" name="Utilizador" entity="User">
+      <Selector id="sv3#area35#area46#page48#dau2#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area35#area46#page48#dau2#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area35#area46#page48#inu6">
+          <layout:Attribute attribute="userName"/>
+          <layout:Link link="sv3#area35#area46#page48#inu6#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area35#area46#page48#dau2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

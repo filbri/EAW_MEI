@@ -1,0 +1,263 @@
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="815" gr:y="-25" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att20 User#att21 User#att36" db:database="db1" db:table="user_4">
+    <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="email" id="email" type="string" db:column="email"/>
+    <Attribute id="User#att20" name="BI" type="string" db:column="bi"/>
+    <Attribute id="User#att21" name="C&#243;digoPostal" type="string" db:column="codigopostal"/>
+    <Attribute id="User#att36" name="Localidade" type="string" db:column="localidade"/>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="465" gr:y="25" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group_3">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="155" gr:y="15" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module_3">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db1" db:table="user_group_3">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_3_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db1" db:table="user_4">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_3_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db1" db:table="group_3">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_3_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db1" db:table="group_module_3">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_3_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_3_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="665" gr:y="470" id="ent4" name="Aluno" duration="persistent" attributeOrder="ent4#att4 ent4#att15" db:database="db1" db:table="aluno_2">
+    <Attribute id="ent4#att4" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att15" name="Nome" type="string" db:column="nome"/>
+    <Generalization superEntity="User">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="665" gr:y="170" id="ent5" name="Professor" duration="persistent" attributeOrder="ent5#att5 ent5#att16" db:database="db1" db:table="professor_2">
+    <Attribute id="ent5#att5" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att16" name="Nome" type="string" db:column="nome"/>
+    <Generalization superEntity="User">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="1225" gr:y="470" id="ent6" name="Encarregado" duration="persistent" attributeOrder="ent6#att6 ent6#att17" db:database="db1" db:table="encarregado_2">
+    <Attribute id="ent6#att6" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att17" name="Nome" type="string" db:column="nome"/>
+    <Generalization superEntity="User">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="1225" gr:y="25" id="ent7" name="Dire&#231;&#227;o" duration="persistent" attributeOrder="ent7#att7 ent7#att18" db:database="db1" db:table="direcao_2">
+    <Attribute id="ent7#att7" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent7#att18" name="Nome" type="string" db:column="nome"/>
+    <Generalization superEntity="User">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="310" gr:y="595" id="ent8" name="Estatistica" duration="persistent" attributeOrder="ent8#att8 ent8#att26 ent8#att27 ent8#att28 ent8#att29" db:database="db1" db:table="estatistica_2">
+    <Attribute id="ent8#att8" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent8#att26" name="Media" type="integer" db:column="media"/>
+    <Attribute id="ent8#att27" name="MelhorNota" type="integer" db:column="melhornota"/>
+    <Attribute id="ent8#att28" name="PiorNota" type="integer" db:column="piornota"/>
+    <Attribute id="ent8#att29" name="Varia&#231;&#227;o" type="integer" db:column="variacao"/>
+  </Entity>
+  <Entity gr:x="1195" gr:y="150" id="ent9" name="Notifica&#231;&#227;o" duration="persistent" attributeOrder="ent9#att9 ent9#att23 ent9#att24 ent9#att30 ent9#att1" db:database="db1" db:table="notificacao_2">
+    <Attribute id="ent9#att9" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent9#att23" name="Mensagem" type="string" db:column="mensagem"/>
+    <Attribute id="ent9#att24" name="Assunto" type="string" db:column="assunto"/>
+    <Attribute id="ent9#att30" name="NomeRemetente" type="string" db:column="nomeremetente"/>
+    <Attribute id="ent9#att1" name="DataLeitura" type="date" db:column="dataleitura"/>
+  </Entity>
+  <Entity gr:x="315" gr:y="325" id="ent10" name="Exercicio" duration="persistent" attributeOrder="ent10#att10 ent10#att22 ent10#att3 ent10#att2" db:database="db1" db:table="exercicio_2">
+    <Attribute id="ent10#att10" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent10#att22" name="Designa&#231;&#227;o" type="string" db:column="designacao"/>
+    <Attribute id="ent10#att3" name="Enunciado" type="string" db:column="enunciado"/>
+    <Attribute id="ent10#att2" name="DataCria&#231;&#227;o" type="date" db:column="datacriacao"/>
+  </Entity>
+  <Entity gr:x="10" gr:y="335" id="ent11" name="Exercicio Individual" duration="persistent" attributeOrder="ent11#att11" db:database="db1" db:table="exercicio_individual_2">
+    <Attribute id="ent11#att11" key="true" name="oid" type="integer" db:column="oid"/>
+    <Generalization superEntity="ent10">
+      <db:JoinColumn attribute="ent10#att10" name="exercicio_2_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="25" gr:y="495" id="ent12" name="Ficha Colectiva" duration="persistent" db:database="db1" db:table="ficha_colectiva_2">
+    <Attribute id="ent12#att12" key="true" name="oid" type="integer" db:column="oid"/>
+    <Generalization superEntity="ent10">
+      <db:JoinColumn attribute="ent10#att10" name="exercicio_2_oid"/>
+    </Generalization>
+  </Entity>
+  <Entity gr:x="650" gr:y="325" id="ent13" name="Turma" duration="persistent" attributeOrder="ent13#att13 ent13#att19" db:database="db1" db:table="turma_2">
+    <Attribute id="ent13#att13" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent13#att19" name="Designa&#231;&#227;o" type="string" db:column="designacao"/>
+  </Entity>
+  <Entity gr:x="330" gr:y="455" id="ent14" name="Nota" duration="persistent" attributeOrder="ent14#att14 ent14#att25" db:database="db1" db:table="nota_2">
+    <Attribute id="ent14#att14" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent14#att25" name="Valor" type="integer" db:column="valor"/>
+  </Entity>
+  <Relationship id="rel2" name="Exercicio_Nota" sourceEntity="ent10" targetEntity="ent14" db:database="db1" db:table="nota_2">
+    <RelationshipRole1 id="rel2#role3" name="ExercicioToNota" maxCard="1">
+      <db:JoinColumn attribute="ent10#att10" name="exercicio_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="NotaToExercicio" maxCard="1">
+      <db:JoinColumn attribute="ent14#att14" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Aluno_Encarregado" sourceEntity="ent4" targetEntity="ent6" db:database="db1" db:table="aluno_2">
+    <RelationshipRole1 id="rel3#role5" name="AlunoToEncarregado" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="EncarregadoToAluno" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="encarregado_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel4" name="Aluno_Turma" sourceEntity="ent4" targetEntity="ent13" db:database="db1" db:table="aluno_2">
+    <RelationshipRole1 id="rel4#role7" name="AlunoToTurma" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="TurmaToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent13#att13" name="turma_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="Turma_Professor" sourceEntity="ent13" targetEntity="ent5" db:database="db1" db:table="turma_professor_2">
+    <RelationshipRole1 id="rel5#role9" name="TurmaToProfessor" maxCard="N">
+      <db:JoinColumn attribute="ent13#att13" name="turma_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="ProfessorToTurma" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="professor_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="Professor_Notifica&#231;&#227;o" sourceEntity="ent5" targetEntity="ent9" db:database="db1" db:table="notificacao_2">
+    <RelationshipRole1 id="rel6#role11" name="ProfessorToNotifica&#231;&#227;o" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="professor_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="Notifica&#231;&#227;oToProfessor" maxCard="1">
+      <db:JoinColumn attribute="ent9#att9" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel7" name="Dire&#231;&#227;o_Notifica&#231;&#227;o" sourceEntity="ent7" targetEntity="ent9" db:database="db1" db:table="notificacao_2">
+    <RelationshipRole1 id="rel7#role13" name="Dire&#231;&#227;oToNotifica&#231;&#227;o" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="direcao_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="Notifica&#231;&#227;oToDire&#231;&#227;o" maxCard="1">
+      <db:JoinColumn attribute="ent9#att9" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="Encarregado_Notifica&#231;&#227;o" sourceEntity="ent6" targetEntity="ent9" db:database="db1" db:table="notificacao_2">
+    <RelationshipRole1 id="rel8#role15" name="EncarregadoToNotifica&#231;&#227;o" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="encarregado_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="Notifica&#231;&#227;oToEncarregado" maxCard="1">
+      <db:JoinColumn attribute="ent9#att9" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel9" name="Professor_Exercicio" sourceEntity="ent5" targetEntity="ent10" db:database="db1" db:table="exercicio_2">
+    <RelationshipRole1 id="rel9#role17" name="ProfessorToExercicio" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="professor_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="ExercicioToProfessor" maxCard="1">
+      <db:JoinColumn attribute="ent10#att10" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel12" name="Turma_Exercicio" sourceEntity="ent13" targetEntity="ent10" db:database="db1" db:table="turma_exercicio_2">
+    <RelationshipRole1 id="rel12#role23" name="TurmaToExercicio" maxCard="N">
+      <db:JoinColumn attribute="ent13#att13" name="turma_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="ExercicioToTurma" maxCard="N">
+      <db:JoinColumn attribute="ent10#att10" name="exercicio_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel13" name="Aluno_Exercicio" sourceEntity="ent4" targetEntity="ent10" db:database="db1" db:table="aluno_exercicio_2">
+    <RelationshipRole1 id="rel13#role25" name="AlunoToExercicio" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="aluno_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel13#role26" name="ExercicioToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent10#att10" name="exercicio_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel14" name="Estatistica_Aluno" sourceEntity="ent8" targetEntity="ent4" db:database="db1" db:table="aluno_2">
+    <RelationshipRole1 id="rel14#role27" name="EstatisticaToAluno" maxCard="1">
+      <db:JoinColumn attribute="ent8#att8" name="estatistica_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="AlunoToEstatistica" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="user_4_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel15" name="Estatistica_Turma" sourceEntity="ent8" targetEntity="ent13" db:database="db1" db:table="turma_2">
+    <RelationshipRole1 id="rel15#role29" name="EstatisticaToTurma" maxCard="1">
+      <db:JoinColumn attribute="ent8#att8" name="estatistica_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel15#role30" name="TurmaToEstatistica" maxCard="1">
+      <db:JoinColumn attribute="ent13#att13" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel16" name="Nota_Estatistica" sourceEntity="ent14" targetEntity="ent8" db:database="db1" db:table="nota_estatistica_2">
+    <RelationshipRole1 id="rel16#role31" name="NotaToEstatistica" maxCard="N">
+      <db:JoinColumn attribute="ent14#att14" name="nota_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel16#role32" name="EstatisticaToNota" maxCard="N">
+      <db:JoinColumn attribute="ent8#att8" name="estatistica_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="880" gr:y="335" id="ent15" name="Escola" duration="persistent" db:database="db1" db:table="escola_2">
+    <Attribute id="ent15#att31" key="true" name="oid" type="integer" db:column="oid"/>
+  </Entity>
+  <Relationship id="rel17" name="Turma_Ano" sourceEntity="ent13" targetEntity="ent15" db:database="db1" db:table="turma_2">
+    <RelationshipRole1 id="rel17#role33" name="TurmaToAno" maxCard="1">
+      <db:JoinColumn attribute="ent13#att13" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel17#role34" name="AnoToTurma" maxCard="N">
+      <db:JoinColumn attribute="ent15#att31" name="escola_2_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="330" gr:y="170" id="ent16" name="Materia" duration="persistent" attributeOrder="ent16#att32 ent16#att33" db:database="db1" db:table="materia_2">
+    <Attribute id="ent16#att32" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent16#att33" name="Nome" type="string" db:column="nome"/>
+  </Entity>
+  <Entity gr:x="75" gr:y="170" id="ent17" name="Disciplina" duration="persistent" attributeOrder="ent17#att34 ent17#att35" db:database="db1" db:table="disciplina_2">
+    <Attribute id="ent17#att34" key="true" name="oid" type="integer" db:column="oid"/>
+    <Generalization superEntity="ent16">
+      <db:JoinColumn attribute="ent16#att32" name="materia_2_oid"/>
+    </Generalization>
+    <Attribute id="ent17#att35" name="Nome" type="string" db:column="nome"/>
+  </Entity>
+  <Relationship id="rel20" name="Materia_Exercicio" sourceEntity="ent16" targetEntity="ent10" db:database="db1" db:table="exercicio_2">
+    <RelationshipRole1 id="rel20#role39" name="MateriaToExercicio" maxCard="N">
+      <db:JoinColumn attribute="ent16#att32" name="materia_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel20#role40" name="ExercicioToMateria" maxCard="1">
+      <db:JoinColumn attribute="ent10#att10" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="Estatistica_Escola" sourceEntity="ent8" targetEntity="ent15" gr:bendpoints="545,0,0,300" db:database="db1" db:table="escola_2">
+    <RelationshipRole1 id="rel10#role19" name="EstatisticaToEscola" maxCard="1">
+      <db:JoinColumn attribute="ent8#att8" name="estatistica_2_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="EscolaToEstatistica" maxCard="1">
+      <db:JoinColumn attribute="ent15#att31" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db1" name="Base de Dados" type="MySQL" url="jdbc:mysql://localhost:3306/mysql" username="root" cryptedPassword="true" password="QW1qZXRv"/>
+</DataModel>

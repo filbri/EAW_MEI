@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area4#area6#page11" name="Criar Notifica&#231;&#245;es" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv3#area4#area6#page11#enu10" name="Criar Notifica&#231;&#227;o" linkOrder="sv3#area4#area6#page11#enu10#ln38" gr:x="0" gr:y="0" entity="ent9" fieldOrder="sv3#area4#area6#page11#enu10#fld50 sv3#area4#area6#page11#enu10#fld51 sv3#area4#area6#page11#enu10#fld52 sv3#area4#area6#page11#enu10#sfld13 sv3#area4#area6#page11#enu10#sfld14 sv3#area4#area6#page11#enu10#sfld15">
+      <Field id="sv3#area4#area6#page11#enu10#fld50" name="Mensagem" type="text" modifiable="true" attribute="ent9#att23"/>
+      <Field id="sv3#area4#area6#page11#enu10#fld51" name="Assunto" type="string" modifiable="true" attribute="ent9#att24"/>
+      <Field id="sv3#area4#area6#page11#enu10#fld52" name="NomeRemetente" type="string" modifiable="true" attribute="ent9#att30"/>
+      <SelectionField id="sv3#area4#area6#page11#enu10#sfld13" name="Notifica&#231;&#227;oToDire&#231;&#227;o" type="string" role="rel7#role14"/>
+      <SelectionField id="sv3#area4#area6#page11#enu10#sfld14" name="Notifica&#231;&#227;oToEncarregado" type="string" role="rel8#role16"/>
+      <SelectionField id="sv3#area4#area6#page11#enu10#sfld15" name="Notifica&#231;&#227;oToProfessor" type="string" role="rel6#role12"/>
+      <Link id="sv3#area4#area6#page11#enu10#ln38" name="Flow8" to="sv3#area4#cru2" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#area6#page11#enu10">
+          <layout:Field field="sv3#area4#area6#page11#enu10#fld50"/>
+          <layout:Field field="sv3#area4#area6#page11#enu10#fld51"/>
+          <layout:Field field="sv3#area4#area6#page11#enu10#fld52"/>
+          <layout:Field field="sv3#area4#area6#page11#enu10#sfld13"/>
+          <layout:Field field="sv3#area4#area6#page11#enu10#sfld14"/>
+          <layout:Field field="sv3#area4#area6#page11#enu10#sfld15"/>
+          <layout:Link link="sv3#area4#area6#page11#enu10#ln38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

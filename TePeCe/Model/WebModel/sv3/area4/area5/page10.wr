@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area4#area5#page10" name="Ver Notifica&#231;&#245;es" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv3#area4#area5#page10#inu1" name="Notifica&#231;&#245;es" linkOrder="sv3#area4#area5#page10#inu1#ln35" gr:x="195" gr:y="125" entity="ent9" displayAttributes="ent9#att23 ent9#att30">
+      <Link id="sv3#area4#area5#page10#inu1#ln35" name="Flow7" to="sv3#area4#area5#page10#dau7" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <DataUnit id="sv3#area4#area5#page10#dau7" name="Ver Notifica&#231;&#227;o" gr:x="360" gr:y="115" entity="ent9" displayAttributes="ent9#att24 ent9#att23">
+      <Selector id="sv3#area4#area5#page10#dau7#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area4#area5#page10#dau7#su14#kcond14" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="sv3#area4#area5#page10#gtu8" name="Get User" gr:x="5" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv3#area4#area5#page10#gtu8#ln36" name="Flow31" to="sv3#area4#area5#page10#seu8" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <SelectorUnit id="sv3#area4#area5#page10#seu8" name="Selectionar Notifica&#231;&#245;es" gr:x="0" gr:y="130" entity="ent9">
+      <Link id="sv3#area4#area5#page10#seu8#ln37" name="Flow32" to="sv3#area4#area5#page10#inu1" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#area5#page10#inu1">
+          <layout:Link link="sv3#area4#area5#page10#inu1#ln35"/>
+          <layout:Attribute attribute="ent9#att23"/>
+          <layout:Attribute attribute="ent9#att30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#area5#page10#dau7">
+          <layout:Attribute attribute="ent9#att24"/>
+          <layout:Attribute attribute="ent9#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,42 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area20#area30#page35" name="Eliminar Utilizador">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv2#area20#area30#page35#mciu1" name="Eliminar User" entity="User" displayAttributes="userName" linkOrder="sv2#area20#area30#page35#mciu1#ln9">
+      <Link id="sv2#area20#area30#page35#mciu1#ln9" name="Apagar" to="sv2#area20#dlu1" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area20#area30#page35#mciu1">
+          <layout:Attribute attribute="userName"/>
+          <layout:Link link="sv2#area20#area30#page35#mciu1#ln9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

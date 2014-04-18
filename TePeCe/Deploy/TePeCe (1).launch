@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.webratio.ide.deploy.core.LocalLaunchConfigurationType">
+<stringAttribute key="model.general.httpPort" value="8080"/>
+<stringAttribute key="model.general.httpsPort" value="8443"/>
+<stringAttribute key="model.general.outputPath" value="${webapps_loc}/${project_name}"/>
+<stringAttribute key="model.servicesJobs.jobGroupName" value="WEBRATIO"/>
+<mapAttribute key="tasks.task0">
+<mapEntry key="type" value="Clear Deployment Folder"/>
+</mapAttribute>
+<mapAttribute key="tasks.task1">
+<mapEntry key="stopOnErrors" value="false"/>
+<mapEntry key="type" value="Generate Web Application"/>
+</mapAttribute>
+</launchConfiguration>

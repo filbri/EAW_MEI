@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBMetaData driverMajorVersion="5" driverMinorVersion="0" driverVersion="mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )" productVersion="5.5.34" identifierQuoteString="`" transactionLevel="Repeatable read" driverName="MySQL-AB JDBC Driver" productName="MySQL">
+  <Table schema="" ignoreIndexes="false" name="aluno" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="encarregado_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="aluno_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_4_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="encarregado_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="aluno_exercicio" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="aluno_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="aluno_exercicio_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="aluno_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="columns_priv" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Table_name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Column_name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="Timestamp" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET" size="31" decimalDigits="0" name="Column_priv" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="db" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Select_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Insert_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Update_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Delete_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Drop_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Grant_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="References_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Index_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_tmp_table_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Lock_tables_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Show_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Execute_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Event_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Trigger_priv" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="direcao" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="direcao_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_4_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="disciplina" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="materia_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="disciplina_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="materia_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="encarregado" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="encarregado_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_4_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="escola" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="escola_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="estatistica" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="media" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="melhornota" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="piornota" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="variacao" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="estatistica_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="media" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="melhornota" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="piornota" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="variacao" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="event" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="body" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="77" decimalDigits="0" name="definer" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="DATETIME" size="0" decimalDigits="0" name="execute_at" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="interval_value" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="18" decimalDigits="0" name="interval_field" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="created" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="modified" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="DATETIME" size="0" decimalDigits="0" name="last_executed" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="DATETIME" size="0" decimalDigits="0" name="starts" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="DATETIME" size="0" decimalDigits="0" name="ends" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="18" decimalDigits="0" name="status" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="8" decimalDigits="0" name="on_completion" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET UNSIGNED" size="450" decimalDigits="0" name="sql_mode" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="comment" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="originator" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="time_zone" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="character_set_client" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="collation_connection" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="db_collation" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="body_utf8" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="exercicio" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="designacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="enunciado" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="0" decimalDigits="0" name="datacriacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="materia_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="exercicio_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="designacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="enunciado" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="0" decimalDigits="0" name="datacriacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="materia_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="exercicio_individual" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="exercicio_individual_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="ficha_colectiva" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="ficha_colectiva_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="func" type="TABLE" refreshed="true">
+    <Column sqlTypeId="-2" indexed="unknown" autoIncrement="false" type="BINARY" size="64" decimalDigits="0" name="name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="BIT" size="0" decimalDigits="0" name="ret" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="128" decimalDigits="0" name="dl" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="9" decimalDigits="0" name="type" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="general_log" type="TABLE" refreshed="true">
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="event_time" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="MEDIUMTEXT" size="16777215" decimalDigits="0" name="user_host" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="thread_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="server_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="64" decimalDigits="0" name="command_type" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="MEDIUMTEXT" size="16777215" decimalDigits="0" name="argument" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="genre" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="genre" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_3" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_3_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_module" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_module_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_module_3" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_3_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="help_category" type="TABLE" refreshed="true">
+    <Column sqlTypeId="5" indexed="unknown" autoIncrement="false" type="SMALLINT UNSIGNED" size="5" decimalDigits="0" name="help_category_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="64" decimalDigits="0" name="name" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="5" indexed="unknown" autoIncrement="false" type="SMALLINT UNSIGNED" size="5" decimalDigits="0" name="parent_category_id" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="128" decimalDigits="0" name="url" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="help_keyword" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="help_keyword_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="64" decimalDigits="0" name="name" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="help_relation" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="help_topic_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="help_keyword_id" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="help_topic" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="help_topic_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="64" decimalDigits="0" name="name" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="5" indexed="unknown" autoIncrement="false" type="SMALLINT UNSIGNED" size="5" decimalDigits="0" name="help_category_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="TEXT" size="65535" decimalDigits="0" name="description" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="TEXT" size="65535" decimalDigits="0" name="example" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="128" decimalDigits="0" name="url" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="host" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Select_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Insert_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Update_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Delete_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Drop_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Grant_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="References_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Index_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_tmp_table_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Lock_tables_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Show_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Execute_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Trigger_priv" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="livros" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="titulo" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="numpages" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="description" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="genre_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="materia" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="materia_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="module" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="moduleid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="modulename" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="module_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="moduleid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="modulename" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="module_3" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="moduleid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="modulename" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="ndb_binlog_index" type="TABLE" refreshed="true">
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="Position" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="File" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="epoch" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="inserts" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="updates" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="deletes" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="20" decimalDigits="0" webMLType="decimal" name="schemaops" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="nota" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="valor" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="nota_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="valor" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="nota_estatistica" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="nota_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="nota_estatistica_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="nota_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="notificacao" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="mensagem" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="assunto" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nomeremetente" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="0" decimalDigits="0" name="dataleitura" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="direcao_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="encarregado_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="notificacao_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="mensagem" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="assunto" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nomeremetente" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="0" decimalDigits="0" name="dataleitura" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="direcao_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="encarregado_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="plugin" type="TABLE" refreshed="true">
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="64" decimalDigits="0" name="name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="128" decimalDigits="0" name="dl" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="proc" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="9" decimalDigits="0" name="type" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="specific_name" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="4" decimalDigits="0" name="language" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="17" decimalDigits="0" name="sql_data_access" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="4" decimalDigits="0" name="is_deterministic" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="8" decimalDigits="0" name="security_type" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="BLOB" size="65535" decimalDigits="0" name="param_list" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="returns" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="body" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="77" decimalDigits="0" name="definer" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="created" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="modified" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET UNSIGNED" size="450" decimalDigits="0" name="sql_mode" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="TEXT" size="65535" decimalDigits="0" name="comment" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="character_set_client" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="collation_connection" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="32" decimalDigits="0" name="db_collation" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="body_utf8" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="procs_priv" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Routine_name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="9" decimalDigits="0" name="Routine_type" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="77" decimalDigits="0" name="Grantor" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET" size="28" decimalDigits="0" name="Proc_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="Timestamp" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="professor" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="professor_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_4_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="proxies_priv" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Proxied_host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="Proxied_user" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="BIT" size="0" decimalDigits="0" name="With_grant" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="77" decimalDigits="0" name="Grantor" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="Timestamp" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="servers" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Server_name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Host" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Username" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Password" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="Port" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Socket" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Wrapper" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Owner" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="slow_log" type="TABLE" refreshed="true">
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="start_time" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="MEDIUMTEXT" size="16777215" decimalDigits="0" name="user_host" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="0" decimalDigits="0" name="query_time" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="0" decimalDigits="0" name="lock_time" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="rows_sent" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="rows_examined" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="512" decimalDigits="0" name="db" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="last_insert_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="insert_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="server_id" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="MEDIUMTEXT" size="16777215" decimalDigits="0" name="sql_text" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="tables_priv" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Db" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Table_name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="77" decimalDigits="0" name="Grantor" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP" size="0" decimalDigits="0" name="Timestamp" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET" size="89" decimalDigits="0" name="Table_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="SET" size="31" decimalDigits="0" name="Column_priv" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="time_zone" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="true" type="INT UNSIGNED" size="10" decimalDigits="0" name="Time_zone_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Use_leap_seconds" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="time_zone_leap_second" type="TABLE" refreshed="true">
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="19" decimalDigits="0" webMLType="decimal" name="Transition_time" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="Correction" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="time_zone_name" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="64" decimalDigits="0" name="Name" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="Time_zone_id" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="time_zone_transition" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="Time_zone_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="2" indexed="unknown" autoIncrement="false" type="NUMERIC" size="19" decimalDigits="0" webMLType="decimal" name="Transition_time" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="Transition_type_id" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="time_zone_transition_type" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="Time_zone_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="Transition_type_id" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="Offset" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-6" indexed="unknown" autoIncrement="false" type="TINYINT UNSIGNED" size="3" decimalDigits="0" name="Is_DST" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="8" decimalDigits="0" name="Abbreviation" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="designacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="escola_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="designacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estatistica_2_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="escola_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma_exercicio" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma_exercicio_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="exercicio_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma_professor" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="turma_professor_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="turma_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="professor_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user" type="TABLE" refreshed="true">
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="Host" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="16" decimalDigits="0" name="User" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="41" decimalDigits="0" name="Password" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Select_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Insert_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Update_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Delete_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Drop_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Reload_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Shutdown_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Process_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="File_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Grant_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="References_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Index_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Show_db_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Super_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_tmp_table_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Lock_tables_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Execute_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Repl_slave_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Repl_client_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Show_view_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Alter_routine_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_user_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Event_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Trigger_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="2" decimalDigits="0" name="Create_tablespace_priv" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="ENUM" size="9" decimalDigits="0" name="ssl_type" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="BLOB" size="65535" decimalDigits="0" name="ssl_cipher" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="BLOB" size="65535" decimalDigits="0" name="x509_issuer" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="BLOB" size="65535" decimalDigits="0" name="x509_subject" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="max_questions" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="max_updates" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="max_connections" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT UNSIGNED" size="10" decimalDigits="0" name="max_user_connections" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="1" indexed="unknown" autoIncrement="false" type="CHAR" size="60" decimalDigits="0" name="plugin" primaryKey="false" notNull="true"/>
+    <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="TEXT" size="65535" decimalDigits="0" name="authentication_string" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="username" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="password" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="email" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_3" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="username" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="password" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="email" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="bi" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="codigopostal" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="localidade" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_2_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_4" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="username" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="password" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="email" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="bi" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="codigopostal" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="localidade" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_3_oid" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_group" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_group_2" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_3_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_2_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_group_3" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_4_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_3_oid" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_livros" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_2_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="livros_oid" primaryKey="true" notNull="true"/>
+  </Table>
+</DBMetaData>

@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area33#area38#page40" name="Lista de Alunos">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area33#area38#page40#pwu2" name="List2" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15" linkOrder="sv3#area33#area38#page40#pwu2#ln24">
+      <Link id="sv3#area33#area38#page40#pwu2#ln24" name="Flow24" to="sv3#area33#area38#page40#seu2" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="140" gr:y="5" id="sv3#area33#area38#page40#seu2" name="Selector2" entity="ent10">
+      <Link id="sv3#area33#area38#page40#seu2#ln25" name="Flow25" to="sv3#area33#area38#page40#pwu4" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="295" gr:y="0" id="sv3#area33#area38#page40#pwu4" name="List4" sortable="true" checkable="false" useCountQuery="false" entity="ent10" linkOrder="sv3#area33#area38#page40#pwu4#ln26">
+      <Link id="sv3#area33#area38#page40#pwu4#ln26" name="Flow26" to="sv3#area33#area41#page43#dau1" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area33#area38#page40#pwu2">
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Link link="sv3#area33#area38#page40#pwu2#ln24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area33#area38#page40#pwu4">
+          <layout:Link link="sv3#area33#area38#page40#pwu4#ln26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

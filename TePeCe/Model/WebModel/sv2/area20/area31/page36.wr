@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="175" gr:y="0" id="sv2#area20#area31#page36" name="Rela&#231;&#245;es">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area20#area31#page36#enu7" name="Form7" entity="ent5" linkOrder="sv2#area20#area31#page36#enu7#ln3 sv2#area20#area31#page36#enu7#ln20" fieldOrder="sv2#area20#area31#page36#enu7#msfld10">
+      <MultiSelectionField id="sv2#area20#area31#page36#enu7#msfld10" name="ProfessorToTurma" type="string" role="rel5#role10"/>
+      <Link id="sv2#area20#area31#page36#enu7#ln3" name="Flow3" to="sv2#area20#area31#cnu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area20#area31#page36#enu7#ln20" name="Flow20" to="sv2#area20#area31#dcnu1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <EntryUnit gr:x="0" gr:y="100" id="sv2#area20#area31#page36#enu19" name="Alunos" entity="ent4" linkOrder="sv2#area20#area31#page36#enu19#ln10 sv2#area20#area31#page36#enu19#ln16 sv2#area20#area31#page36#enu19#ln27 sv2#area20#area31#page36#enu19#ln28">
+      <SelectionField id="sv2#area20#area31#page36#enu19#sfld19" name="AlunoToEncarregado" type="string" role="rel3#role5"/>
+      <SelectionField id="sv2#area20#area31#page36#enu19#sfld20" name="AlunoToTurma" type="string" role="rel4#role7"/>
+      <Link id="sv2#area20#area31#page36#enu19#ln10" name="Flow10" to="sv2#area20#area31#cnu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area20#area31#page36#enu19#ln16" name="Flow16" to="sv2#area20#area31#cnu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area20#area31#page36#enu19#ln27" name="Flow27" to="sv2#area20#area31#dcnu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area20#area31#page36#enu19#ln28" name="Flow28" to="sv2#area20#area31#dcnu3" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area20#area31#page36#enu7">
+          <layout:Field field="sv2#area20#area31#page36#enu7#msfld10"/>
+          <layout:Link link="sv2#area20#area31#page36#enu7#ln3"/>
+          <layout:Link link="sv2#area20#area31#page36#enu7#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area20#area31#page36#enu19">
+          <layout:Field field="sv2#area20#area31#page36#enu19#sfld19"/>
+          <layout:Field field="sv2#area20#area31#page36#enu19#sfld20"/>
+          <layout:Link link="sv2#area20#area31#page36#enu19#ln10"/>
+          <layout:Link link="sv2#area20#area31#page36#enu19#ln16"/>
+          <layout:Link link="sv2#area20#area31#page36#enu19#ln27"/>
+          <layout:Link link="sv2#area20#area31#page36#enu19#ln28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

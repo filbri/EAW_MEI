@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area20#area26#page32" name="Ver Utilizadores">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area20#area26#page32#pwu3" name="Lista de Utilizadores" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName" linkOrder="sv2#area20#area26#page32#pwu3#ln5">
+      <Link id="sv2#area20#area26#page32#pwu3#ln5" name="Flow5" to="sv2#area20#area29#page34#enu2" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area20#area26#page32#pwu3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Link link="sv2#area20#area26#page32#pwu3#ln5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="285" gr:y="-115" id="sv2#area19" name="Notifica&#231;&#245;es" landmark="true" landmarks="sv2#area19#area23 sv2#area19#area24 sv2#area19#area25" defaultPage="sv2#area19#cru1">
+  <OperationUnits>
+    <CreateUnit gr:x="55" gr:y="395" id="sv2#area19#cru1" name="Create1" entity="ent9">
+      <OKLink id="sv2#area19#cru1#oln8" name="OKFlow8" to="sv2#area19#area24#page30#enu8" automaticCoupling="true" gr:bendpoints="149,-15,-161,-15"/>
+      <KOLink id="sv2#area19#cru1#kln8" name="KOFlow8" to="sv2#area19#area24#page30#enu8" automaticCoupling="true" gr:bendpoints="122,15,-133,15"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

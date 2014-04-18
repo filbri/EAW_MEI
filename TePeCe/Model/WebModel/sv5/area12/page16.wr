@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area12#page16" name="Home Page" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv5#area12#page16#enu16" name="Login" linkOrder="sv5#area12#page16#enu16#ln49" gr:x="0" gr:y="0" entity="ent6">
+      <Link id="sv5#area12#page16#enu16#ln49" name="Flow14" to="sv5#area12#lgu5" type="normal" automaticCoupling="true" validate="true"/>
+      <Field id="sv5#area12#page16#enu16#fld60" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv5#area12#page16#enu16#fld61" name="password" type="password" modifiable="true" attribute="password"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area12#page16#enu16">
+          <layout:Field field="sv5#area12#page16#enu16#fld60"/>
+          <layout:Field field="sv5#area12#page16#enu16#fld61"/>
+          <layout:Link link="sv5#area12#page16#enu16#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

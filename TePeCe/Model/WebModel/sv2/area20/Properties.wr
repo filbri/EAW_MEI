@@ -1,0 +1,18 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="875" gr:y="10" id="sv2#area20" name="Utilizadores" landmark="true" landmarks="sv2#area20#area26 sv2#area20#area28 sv2#area20#area29 sv2#area20#area30 sv2#area20#area31" defaultPage="sv2#area20#mfu3">
+  <OperationUnits>
+    <ModifyUnit gr:x="230" gr:y="420" id="sv2#area20#mfu3" name="Mudar User" entity="User">
+      <Selector id="sv2#area20#mfu3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#mfu3#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area20#mfu3#oln4" name="OKFlow4" to="sv2#area20#area26#page32#pwu3" automaticCoupling="true"/>
+      <KOLink id="sv2#area20#mfu3#kln4" name="KOFlow4" to="sv2#area20#area29#page34#enu2" automaticCoupling="true" gr:bendpoints="-76,28,94,-2"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="240" gr:y="610" id="sv2#area20#dlu1" name="Apagar User" entity="User">
+      <Selector id="sv2#area20#dlu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area20#dlu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area20#dlu1#oln5" name="OKFlow5" to="sv2#area20#area30#page35#mciu1" automaticCoupling="true" gr:bendpoints="-103,15,102,15"/>
+      <KOLink id="sv2#area20#dlu1#kln5" name="KOFlow5" to="sv2#area20#area30#page35#mciu1" automaticCoupling="true" gr:bendpoints="-103,-15,102,-15"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

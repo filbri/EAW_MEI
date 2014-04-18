@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area36#page49" name="Ver  Estatisticas">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="190" id="sv3#area36#page49#dau3" name="Estatistica" entity="ent8">
+      <Selector id="sv3#area36#page49#dau3#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area36#page49#dau3#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <PowerIndexUnit gr:x="10" gr:y="0" id="sv3#area36#page49#pwu1" name="List1" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv3#area36#page49#pwu1#ln17">
+      <Link id="sv3#area36#page49#pwu1#ln17" name="Flow17" to="sv3#area36#page49#dau3" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area36#page49#dau3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area36#page49#pwu1">
+          <layout:Link link="sv3#area36#page49#pwu1#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="0" id="sv2#area19#area25#page31" name="Eliminar Notifica&#231;&#245;es">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv2#area19#area25#page31#mciu2" name="CheckableList2" entity="ent9" linkOrder="sv2#area19#area25#page31#mciu2#ln1" displayAttributes="ent9#att24">
+      <Link id="sv2#area19#area25#page31#mciu2#ln1" name="Apagar" to="sv2#area19#area25#dlu3" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiChoiceIndexUnit>
+    <GetUnit gr:x="0" gr:y="245" id="sv2#area19#area25#page31#gtu7" name="Get User" contextParameters="UserCtxParam">
+      <Link id="sv2#area19#area25#page31#gtu7#ln33" name="Flow33" to="sv2#area19#area25#page31#seu7" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="20" gr:y="125" id="sv2#area19#area25#page31#seu7" name="Selecionar Notifica&#231;&#245;es" entity="ent9">
+      <Link id="sv2#area19#area25#page31#seu7#ln34" name="Flow34" to="sv2#area19#area25#page31#mciu2" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area19#area25#page31#mciu2">
+          <layout:Link link="sv2#area19#area25#page31#mciu2#ln1"/>
+          <layout:Attribute attribute="ent9#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

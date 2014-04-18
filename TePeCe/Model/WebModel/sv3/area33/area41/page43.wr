@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area33#area41#page43" name="Atribuir Nota a Exercicio">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area33#area41#page43#dau1" name="Nota" entity="ent10">
+      <Selector id="sv3#area33#area41#page43#dau1#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area33#area41#page43#dau1#su10#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit gr:x="115" gr:y="15" id="sv3#area33#area41#page43#enu12" name="Form12" entity="ent14">
+      <Field id="sv3#area33#area41#page43#enu12#fld33" name="Valor" type="integer" modifiable="true" attribute="ent14#att25"/>
+      <MultiSelectionField id="sv3#area33#area41#page43#enu12#msfld7" name="NotaToEstatistica" type="string" role="rel16#role31"/>
+      <SelectionField id="sv3#area33#area41#page43#enu12#sfld12" name="NotaToExercicio" type="string" role="rel2#role4"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area33#area41#page43#dau1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area33#area41#page43#enu12">
+          <layout:Field field="sv3#area33#area41#page43#enu12#fld33"/>
+          <layout:Field field="sv3#area33#area41#page43#enu12#msfld7"/>
+          <layout:Field field="sv3#area33#area41#page43#enu12#sfld12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

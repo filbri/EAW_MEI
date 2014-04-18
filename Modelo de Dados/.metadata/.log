@@ -1,0 +1,13 @@
+!SESSION 2014-04-17 23:32:23.514 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_PT
+Command-line arguments:  -data C:\Users\hp\Documents\GitHub\EAW_MEI\Modelo de Dados -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 0 2014-04-17 23:33:50.020
+!MESSAGE Unable to create editor ID com.webratio.ide.ui.editors.WebProjectEditor: This copy of WebRatio is not registered
+!STACK 1
+org.eclipse.ui.PartInitException: This copy of WebRatio is not registered
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-04-17 23:33:50.022
+!MESSAGE This copy of WebRatio is not registered

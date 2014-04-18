@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area33#area39#page41" name="Novo Exercicio">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area33#area39#page41#enu4" name="Exercicio" entity="ent10" linkOrder="sv3#area33#area39#page41#enu4#ln2">
+      <Link id="sv3#area33#area39#page41#enu4#ln2" name="Flow2" to="sv3#area33#area39#cru4" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv3#area33#area39#page41#enu4#fld27" name="Designa&#231;&#227;o" type="string" modifiable="true" attribute="ent10#att22"/>
+      <Field id="sv3#area33#area39#page41#enu4#fld28" name="Enunciado" type="string" modifiable="true" attribute="ent10#att3"/>
+      <Field id="sv3#area33#area39#page41#enu4#fld29" name="DataCria&#231;&#227;o" type="date" modifiable="true" attribute="ent10#att2"/>
+      <MultiSelectionField id="sv3#area33#area39#page41#enu4#msfld3" name="ExercicioToAluno" type="string" role="rel13#role26"/>
+      <SelectionField id="sv3#area33#area39#page41#enu4#sfld6" name="ExercicioToMateria" type="string" role="rel20#role40"/>
+      <SelectionField id="sv3#area33#area39#page41#enu4#sfld7" name="ExercicioToNota" type="string" role="rel2#role3"/>
+      <SelectionField id="sv3#area33#area39#page41#enu4#sfld8" name="ExercicioToProfessor" type="string" role="rel9#role18"/>
+      <MultiSelectionField id="sv3#area33#area39#page41#enu4#msfld4" name="ExercicioToTurma" type="string" role="rel12#role24"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area33#area39#page41#enu4">
+          <layout:Link link="sv3#area33#area39#page41#enu4#ln2"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#fld27"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#fld28"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#fld29"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#msfld3"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#sfld6"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#sfld7"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#sfld8"/>
+          <layout:Field field="sv3#area33#area39#page41#enu4#msfld4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
