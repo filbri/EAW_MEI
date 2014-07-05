@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<h1>Dados da Direção</h1>
+
+<br>
+
+<table style="width:500px" height="250" border="0" align=center>
+   <tr>
+   <td><strong>Nome:</strong></td> <td colspan="3"><%= @direc.nome %></td>
+  </tr>
+  <tr>
+    <td><strong>Dt. Nascimento:</strong></td> <td colspan="3"><%= @direc.dataNasc %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº Bi/CC:</strong></td> <td colspan="3"><%= @direc.nBI %></td>
+  </tr>
+  <tr>
+    <td><strong>Morada:</strong></td> <td colspan="3"><%= @direc.morada %></td>
+  </tr>
+  <tr>
+    <td><strong>Cod.Postal:</strong></td> <td colspan="3"><%= @direc.cp %></td>
+  </tr>
+  <tr>
+    <td><strong>Localidade:</strong></td> <td colspan="20"><%= @direc.localidade %></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td> <td colspan="3"><%= @direc.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº de Utilizador:</strong></td> <td colspan="3"><%= @direc.user_id %></td>
+  </tr>
+</table>
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Editar', edit_direc_path(@direc) %> |
+<%= link_to 'Voltar', direcs_path %>
+<h5>
+</div>

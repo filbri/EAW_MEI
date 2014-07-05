@@ -1,0 +1,25 @@
+<h1>Caixa de Entrada</h1>
+
+<br>
+<br>
+<div class="lists">
+	<h5>
+		<%= link_to 'Nova Mensagen', new_mensagen_path %>
+	<h5>
+</div
+<br>
+<br>
+
+
+<%= will_paginate %>
+
+<ul class="mensagens">
+  <% @mensagens.each do |mensagen| %>
+    <li>
+      <%= link_to mensagen.assunto, mensagen %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+

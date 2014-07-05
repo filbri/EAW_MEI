@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<h1>Dados do Enc. Educação</h1>
+
+<br>
+
+<table style="width:500px" height="250" border="0" align=center>
+   <tr>
+   <td><strong>Nome:</strong></td> <td colspan="3"><%= @encarregado.nome %></td>
+  </tr>
+  <tr>
+    <td><strong>Dt. Nascimento:</strong></td> <td colspan="3"><%= @encarregado.dataNasc %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº Bi/CC:</strong></td> <td colspan="3"><%= @encarregado.nBI %></td>
+  </tr>
+  <tr>
+    <td><strong>Morada:</strong></td> <td colspan="3"><%= @encarregado.morada %></td>
+  </tr>
+  <tr>
+    <td><strong>Cod.Postal:</strong></td> <td colspan="3"><%= @encarregado.cp %></td>
+  </tr>
+  <tr>
+    <td><strong>Localidade:</strong></td> <td colspan="20"><%= @encarregado.localidade %></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td> <td colspan="3"><%= @encarregado.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº de Utilizador:</strong></td> <td colspan="3"><%= @encarregado.user_id %></td>
+  </tr>
+</table>
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Edit', edit_encarregado_path(@encarregado) %> |
+<%= link_to 'Back', encarregados_path %>
+<h5>
+</div>

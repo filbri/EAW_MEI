@@ -1,0 +1,40 @@
+<%= form_for(@mensagen) do |f| %>
+  <% if @mensagen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mensagen.errors.count, "error") %> prohibited this mensagen from being saved:</h2>
+
+      <ul>
+      <% @mensagen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+    <div class="row">
+	<div class="span6 offset3">
+  
+  <div class="field">
+    <%= f.label :remetente %><br>
+    <%= f.text_field :remetente %>
+  </div>
+  <div class="field">
+    <%= f.label :destinatario %><br>
+    <%= f.text_field :destinatario %>
+  </div>
+  <div class="field">
+    <%= f.label :assunto %><br>
+    <%= f.text_field :assunto %>
+  </div>
+  <div class="field">
+    <%= f.label :mensagem %><br>
+    <%= f.text_area :mensagem,  placeholder: "Nova Mensagem..." %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Enviar Mensagem", class: "btn btn-large btn-primary" %>
+  </div>
+  
+   </div>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<h1>Dados dos Professores</h1>
+
+<br>
+
+<table style="width:500px" height="250" border="0" align=center>
+   <tr>
+   <td><strong>Nome:</strong></td> <td colspan="3"><%= @prof.nome %></td>
+  </tr>
+  <tr>
+    <td><strong>Dt. Nascimento:</strong></td> <td colspan="3"><%= @prof.dataNasc %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº Bi/CC:</strong></td> <td colspan="3"><%= @prof.nBI %></td>
+  </tr>
+  <tr>
+    <td><strong>Morada:</strong></td> <td colspan="3"><%= @prof.morada %></td>
+  </tr>
+  <tr>
+    <td><strong>Cod.Postal:</strong></td> <td colspan="3"><%= @prof.cp %></td>
+  </tr>
+  <tr>
+    <td><strong>Localidade:</strong></td> <td colspan="20"><%= @prof.localidade %></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td> <td colspan="3"><%= @prof.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº de Utilizador:</strong></td> <td colspan="3"><%= @prof.user_id %></td>
+  </tr>
+</table>
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Edit', edit_prof_path(@prof) %> |
+<%= link_to 'Back', profs_path %>
+<h5>
+</div>
+

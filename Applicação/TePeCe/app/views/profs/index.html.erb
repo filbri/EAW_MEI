@@ -1,0 +1,23 @@
+<h1>Listagem de Professores</h1>
+
+<br>
+<div class="lists">
+<h5>
+<%= link_to 'Novo Professor', new_prof_path %>
+<h5>
+</div>
+<br>
+<br>
+
+<%= will_paginate %>
+
+<ul class="profs">
+  <% @profs.each do |prof| %>
+    <li>
+      <%= link_to prof.nome, prof %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+

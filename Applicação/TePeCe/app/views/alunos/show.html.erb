@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<h1>Dados do Aluno</h1>
+
+<br>
+
+<table style="width:500px" height="250" border="0" align=center>
+   <tr>
+	<td><strong>Nome:</strong></td> <td colspan="3"><%= @aluno.nome %></td>
+  </tr>
+  <tr>
+    <td><strong>Dt. Nascimento:</strong></td> <td colspan="3"><%= @aluno.dataNasc %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº Bi/CC:</strong></td> <td colspan="3"><%= @aluno.nBI %></td>
+  </tr>
+  <tr>
+    <td><strong>Morada:</strong></td> <td colspan="3"><%= @aluno.morada %></td>
+  </tr>
+  <tr>
+    <td><strong>Cod.Postal:</strong></td> <td colspan="3"><%= @aluno.cp %></td>
+  </tr>
+  <tr>
+    <td><strong>Localidade:</strong></td> <td colspan="20"><%= @aluno.localidade %></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td> <td colspan="3"><%= @aluno.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Nº de Utilizador:</strong></td> <td colspan="3"><%= @aluno.user_id %></td>
+  </tr>  
+</table>
+
+
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Editar', edit_aluno_path(@aluno) %> |
+<%= link_to 'Voltar', alunos_path %>
+<h5>
+</div>

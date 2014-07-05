@@ -1,0 +1,72 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "TePeCe", static_pages_home_path, id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+				<li><%= link_to "Home", static_pages_home_path %></li>
+
+				
+				<% if signed_in? %>
+				
+				<li id="fat-menu" class="dropdown">
+					<a href="#">
+						Estatísticas <b class="caret"></b>
+					</a>
+				</li>
+				
+				<li id="fat-menu" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Exercicio <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Lançar Exercício", alunos_path %></li>
+						<li><%= link_to "Ver Exercícios", encarregados_path%></li>
+						<li><%= link_to "Fazer Exercícios", profs_path %></li>
+						<li><%= link_to "Atribuir Nota", direcs_path %></li>	
+					</ul>
+				</li>
+				
+				
+				<li id="fat-menu" class="dropdown">
+					<a href="mensagens">
+						Mensagens <b class="caret"></b>
+					</a>
+				</li>
+				
+				
+				<li id="fat-menu" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Utilizadores <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Alunos", alunos_path %></li>
+						<li><%= link_to "Enc.Educação", encarregados_path%></li>
+						<li><%= link_to "Professores", profs_path %></li>
+						<li><%= link_to "Direcão", direcs_path %></li>	
+					</ul>
+				</li>
+				
+				<li id="fat-menu" class="dropdown">
+					<a href=mensagens_path class="dropdown-toggle" data-toggle="dropdown">
+						Account <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Editar Perfil", current_user %></li>
+						<li><%= link_to "Definições", edit_user_path(current_user) %></li>
+						<li class="divider"></li>
+						<li>
+							<%= link_to "Sair", signout_path, method: "delete" %>
+						</li>
+					</ul>
+				</li>
+				<% else %>
+					<li><%= link_to "Sign in", signin_path %></li>
+				<% end %>	
+				
+			
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>

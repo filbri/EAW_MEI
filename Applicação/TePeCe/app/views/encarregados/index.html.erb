@@ -1,0 +1,25 @@
+<h1>Listagem de Encarregados de Educação</h1>
+
+
+<br>
+<br>
+<div class="lists">
+<h5>
+<%= link_to 'Novo Enc. Educação', new_encarregado_path %>
+<h5>
+</div>
+
+<br>
+<br>
+
+
+<%= will_paginate %>
+
+<ul class="encarregados">
+  <% @encarregados.each do |encarregado| %>
+     <li>
+      <%= link_to encarregado.nome, encarregado %>
+    </li>
+  <% end %>
+</ul>
+

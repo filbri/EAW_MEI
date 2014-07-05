@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h1>Mensagem </h1>
+
+
+<table style="width:500px" height="250" border="0" align=center>
+   <tr>
+	<td><strong>Remetente:</strong></td> <td colspan="3"><%= @mensagen.remetente %></td>
+  </tr>
+  <tr>
+    <td><strong>Destinatario:</strong></td> <td colspan="3"><%= @mensagen.destinatario %></td>
+  </tr>
+  <tr>
+    <td><strong>Assunto:</strong></td> <td colspan="3"><%= @mensagen.assunto %></td>
+  </tr>
+  <tr>
+    <td><strong>Mensagem:</strong></td> <td colspan="3"><%= @mensagen.mensagem %></td>
+  </tr>
+</table>
+  
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Back', mensagens_path %>
+<h5>
+</div>

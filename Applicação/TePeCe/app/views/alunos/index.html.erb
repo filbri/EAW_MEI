@@ -1,0 +1,24 @@
+<% provide(:title, 'All users') %>
+<h1>Listagem de Alunos</h1>
+
+<br>
+<div class="lists">
+<h5>
+<%= link_to 'Inserir Novo Aluno', new_aluno_path %>
+<h5>
+</div>
+
+<br>
+
+<%= will_paginate %>
+
+<ul class="alunos">
+  <% @alunos.each do |aluno| %>
+    <li>
+      <%= link_to aluno.nome, aluno %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+

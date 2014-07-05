@@ -1,0 +1,56 @@
+<%= form_for(@direc) do |f| %>
+  <% if @direc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direc.errors.count, "error") %> prohibited this direc from being saved:</h2>
+
+      <ul>
+      <% @direc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+	<div class="span6 offset3">
+  
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :dataNasc %><br>
+    <%= f.date_select :dataNasc %>
+  </div>
+  <div class="field">
+    <%= f.label :nBI %><br>
+    <%= f.number_field :nBI %>
+  </div>
+  <div class="field">
+    <%= f.label :morada %><br>
+    <%= f.text_field :morada %>
+  </div>
+  <div class="field">
+    <%= f.label :cp %><br>
+    <%= f.text_field :cp %>
+  </div>
+  <div class="field">
+    <%= f.label :localidade %><br>
+    <%= f.text_field :localidade %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Gravar", class: "btn btn-large btn-primary" %>
+  </div>
+  </div>
+  </div>
+  
+  
+<% end %>

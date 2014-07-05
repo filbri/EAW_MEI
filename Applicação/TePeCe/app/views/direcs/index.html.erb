@@ -1,0 +1,21 @@
+<h1>Membros da Direcão</h1>
+
+<%= will_paginate %>
+
+<ul class="direcs">
+  <% @direcs.each do |direc| %>
+    <li>
+      <%= link_to direc.nome, direc %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<br>
+<br>
+<div class="links">
+<h5>
+<%= link_to 'Novo Membro', new_direc_path %>
+<h5>
+</div>
