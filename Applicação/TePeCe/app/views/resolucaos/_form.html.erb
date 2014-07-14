@@ -1,0 +1,28 @@
+<%= form_for @resolucao, url: new_exercicio_resolucao_path(@exercicio), html: { method: :put } do |f| %>
+  <% if @resolucao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resolucao.errors.count, "error") %> prohibited this resolucao from being saved:</h2>
+
+      <ul>
+      <% @resolucao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label "Enunciado" %><br>
+    <%= f.label @exercicio.enunciado %><br>
+  </div>
+  
+  <div class="field">
+    <%= f.label :resposta %><br>
+    <%= f.text_area :resposta %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Gravar" %>
+  </div>
+<% end %>

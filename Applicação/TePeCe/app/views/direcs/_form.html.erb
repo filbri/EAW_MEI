@@ -11,46 +11,52 @@
     </div>
   <% end %>
 
-  <div class="row">
-	<div class="span6 offset3">
+<div class="row">
+	<div class="span3 offset1">
   
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :dataNasc %><br>
-    <%= f.date_select :dataNasc %>
-  </div>
-  <div class="field">
-    <%= f.label :nBI %><br>
-    <%= f.number_field :nBI %>
-  </div>
-  <div class="field">
-    <%= f.label :morada %><br>
-    <%= f.text_field :morada %>
-  </div>
-  <div class="field">
-    <%= f.label :cp %><br>
-    <%= f.text_field :cp %>
-  </div>
-  <div class="field">
-    <%= f.label :localidade %><br>
-    <%= f.text_field :localidade %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Gravar", class: "btn btn-large btn-primary" %>
-  </div>
-  </div>
-  </div>
+		  <div class="field">
+			<%= f.label :nome %>
+			<%= f.text_field :nome %>
+		  </div>
+		  
+		  <div class="field">
+			<%= f.label :dataNasc %>
+			<%= f.date_select :dataNasc %>
+		  </div>
+		  
+		  <div class="field">
+			<%= f.label :nBI %>
+			<%= f.number_field :nBI %>
+		  </div>
+
+		  <div class="field">
+			<%= f.label :morada %>
+			<%= f.text_field :morada %>
+		  </div>
+
+		  <div class="field">
+			<%= f.label :cp %>
+			<%= f.text_field :cp %>
+		  </div>
+
+		  <div class="field">
+			<%= f.label :localidade %>
+			<%= f.text_field :localidade %>
+		  </div>
+  
+   	  <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmacao" %>
+      <%= f.password_field :password_confirmation %>
   
   
+		  <div class="actions">
+			<%= f.submit "Gravar", class: "btn btn-primary" %>
+		  </div>
+	</div>
+</div>  
 <% end %>

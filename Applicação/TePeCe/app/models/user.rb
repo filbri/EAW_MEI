@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
-	has_many :alunos, dependent: :destroy
+	has_one :aluno, dependent: :destroy
+	has_one :prof
+	has_one :direc
+	has_one :encarregado
 	
+	has_many :mensagens
 	
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
@@ -14,12 +18,24 @@ class User < ActiveRecord::Base
 	validates :password, length: { minimum: 6 }
 	
 	def User.new_remember_token
-    SecureRandom.urlsafe_base64
-  end
+		SecureRandom.urlsafe_base64
+	end
 
-  def User.digest(token)
-    Digest::SHA1.hexdigest(token.to_s)
-  end
+	def User.digest(token)
+		Digest::SHA1.hexdigest(token.to_s)
+	end
+	
+	def user_name
+		if self.aluno
+			self.aluno.nome
+		elsif self.prof
+			self.prof.nome
+		elsif self.direc
+			self.direc.nome
+		else
+			self.encarregado.nome
+		end	
+	end
 
   private
 

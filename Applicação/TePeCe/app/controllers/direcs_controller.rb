@@ -11,11 +11,13 @@ class DirecsController < ApplicationController
   # GET /direcs/1
   # GET /direcs/1.json
   def show
+	@direc = Direc.find(params[:id])
   end
 
   # GET /direcs/new
   def new
     @direc = Direc.new
+	@user = User.new
   end
 
   # GET /direcs/1/edit
@@ -26,11 +28,15 @@ class DirecsController < ApplicationController
   # POST /direcs.json
   def create
     @direc = Direc.new(direc_params)
+	@user = User.new(user_params)
 
     respond_to do |format|
-      if @direc.save
-        format.html { redirect_to @direc, notice: 'Direc was successfully created.' }
-        format.json { render :show, status: :created, location: @direc }
+      if @user.save
+		@direc.user_id = @user.id;
+		if @direc.save
+			format.html { redirect_to @direc, notice: 'Direc was successfully created.' }
+			format.json { render :show, status: :created, location: @direc }
+		end
       else
         format.html { render :new }
         format.json { render json: @direc.errors, status: :unprocessable_entity }
@@ -71,5 +77,10 @@ class DirecsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def direc_params
       params.require(:direc).permit(:nome, :dataNasc, :nBI, :morada, :cp, :localidade, :email, :user_id)
+    end
+	
+	def user_params
+      params.require(:direc).permit(:email, :password,
+                                   :password_confirmation)
     end
 end

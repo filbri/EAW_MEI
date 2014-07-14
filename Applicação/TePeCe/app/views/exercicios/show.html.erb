@@ -1,0 +1,107 @@
+<h1></h1>
+<legend>Exercicio</legend>
+
+<div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th></th>
+						                  <th></th>
+						                  <th></th>
+						                </tr>
+						              </thead>
+						             
+									  
+									  <tbody>
+						                <tr>
+						                  <td></td>
+						                  <td><strong>Titulo</strong></strong></td>			                  
+										  <td><%= @exercicio.titulo %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Enunciado</strong></td>			                  
+										  <td><%= @exercicio.enunciado %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Disciplina</strong></td>			                  
+										  <td><%= Disciplina.find(@exercicio.disciplina_id).designacao %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Professor</strong></td>			                  
+										  <td><%= Prof.find(@exercicio.prof_id).nome %></td>
+										</tr>
+										
+										<tr>
+										
+						                  <td></td>
+						                  <td><strong>Resolução</strong></td>			                  
+										  <td> <% if @exercicio.resolucao != nil %>
+													<%= @exercicio.resolucao.resposta  %>
+												<% else %>
+													<p><strong>Exercicio nao resolvido</strong></p>
+												<% end %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+										  <td><p><strong>Nota</strong></td>
+						                  <td><% if @exercicio.nota != nil %>
+													<%= @exercicio.nota.valor %></p>
+												<% else %>
+													<p><strong>Nota nao atribuida</strong></p>
+												<% end %></td>			                  
+										  <td><%=  %></td>
+										</tr>
+										
+													
+										
+											
+										<tr>
+										  <td></td>
+						                  <td> <br> <br>
+											<% if current_user.aluno %>
+												<% if not @exercicio.nota %>
+													<% if @exercicio.resolucao != nil %>
+														<%= link_to 'Alterar Resolucao', edit_exercicio_resolucao_path(@exercicio, @exercicio.resolucao) %> |
+													<% else %>
+														<%= link_to 'Resolver', new_exercicio_resolucao_path(@exercicio) %> |
+													<% end %>
+												<% end %>
+											<% elsif current_user.prof %>
+												<%= link_to image_tag("edit-icon24.png") + 'Alterar', edit_exercicio_path(@exercicio) %>
+												<% if @exercicio.resolucao %>
+													<% if @exercicio.nota %>
+														<%= link_to  image_tag("edit-icon24.png") + 'Alterar Nota', edit_exercicio_notum_path(@exercicio, @exercicio.nota) %>
+													<% else %>
+														<%= link_to image_tag("edit-icon24.png") + 'Atribuir Nota', new_exercicio_notum_path(@exercicio) %>
+													<% end %>
+												<% end %>
+											<% end %>						               		                  
+										  <td> <br> <br>
+										  <%= link_to image_tag("back-icon32.png") + "Voltar", alunos_path  %></td>
+										</tr>		
+										 
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
+
+
+

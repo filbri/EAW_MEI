@@ -1,0 +1,38 @@
+<%= form_for(@exercicio) do |f| %>
+  <% if @exercicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exercicio.errors.count, "error") %> prohibited this exercicio from being saved:</h2>
+
+      <ul>
+      <% @exercicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="row">
+	<div class="span3 offset1">  
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :enunciado %><br>
+    <%= f.text_area :enunciado,  placeholder: "Novo Exercicio..." %>
+  </div>
+  <div class="field">
+    <%= f.label :aluno_id %><br>
+	<%= f.collection_select :aluno_id, @alunos, :id, :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :disciplina_id %><br>
+  <%= f.collection_select :disciplina_id, @disciplinas, :id, :designacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Gravar", class: "btn btn-primary"%>
+  </div>
+  </div>
+  </div>
+<% end %>

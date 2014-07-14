@@ -1,4 +1,5 @@
-<h1>Nova Mensagem</h1>
+<h1></h1>
+<legend>Nova Mensagem</legend>
 
 <%= render 'form' %>
 
@@ -6,7 +7,5 @@
 <br>
 <br>
 <div class="links">
-<h5>
-<%= link_to 'Back', mensagens_path %>
-<h5>
+<%= link_to image_tag("back-icon32.png") +'Voltar', user_mensagens_path(@user) %>
 </div>

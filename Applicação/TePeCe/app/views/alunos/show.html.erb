@@ -1,42 +1,98 @@
-<p id="notice"><%= notice %></p>
-<h1>Dados do Aluno</h1>
+<h1></h1>
+<legend>Dados do Aluno <b><%= @aluno.nome %> </b></legend>
 
-<br>
+  <br>
 
-<table style="width:500px" height="250" border="0" align=center>
-   <tr>
-	<td><strong>Nome:</strong></td> <td colspan="3"><%= @aluno.nome %></td>
-  </tr>
-  <tr>
-    <td><strong>Dt. Nascimento:</strong></td> <td colspan="3"><%= @aluno.dataNasc %></td>
-  </tr>
-  <tr>
-    <td><strong>Nº Bi/CC:</strong></td> <td colspan="3"><%= @aluno.nBI %></td>
-  </tr>
-  <tr>
-    <td><strong>Morada:</strong></td> <td colspan="3"><%= @aluno.morada %></td>
-  </tr>
-  <tr>
-    <td><strong>Cod.Postal:</strong></td> <td colspan="3"><%= @aluno.cp %></td>
-  </tr>
-  <tr>
-    <td><strong>Localidade:</strong></td> <td colspan="20"><%= @aluno.localidade %></td>
-  </tr>
-  <tr>
-    <td><strong>Email:</strong></td> <td colspan="3"><%= @aluno.email %></td>
-  </tr>
-  <tr>
-    <td><strong>Nº de Utilizador:</strong></td> <td colspan="3"><%= @aluno.user_id %></td>
-  </tr>  
-</table>
-
-
-
-<br>
-<br>
-<div class="links">
-<h5>
-<%= link_to 'Editar', edit_aluno_path(@aluno) %> |
-<%= link_to 'Voltar', alunos_path %>
-<h5>
+  <div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th></th>
+						                  <th></th>
+						                  <th></th>
+						                </tr>
+						              </thead>
+						             
+									  
+									  <tbody>
+						                <tr>
+						                  <td></td>
+						                  <td><strong>Nome</strong></strong></td>			                  
+										  <td><%= @aluno.nome %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Encarregado</strong></td>			                  
+										  <td><%= @encarregado.nome %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Data Nasc</strong></td>			                  
+										  <td><%= @aluno.dataNasc %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Nº Bi/CC</strong></td>			                  
+										  <td><%= @aluno.nBI %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Morada</strong></td>			                  
+										  <td><%= @aluno.morada %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Cód.Postal</strong></td>			                  
+										  <td><%= @aluno.cp %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Email</strong></td>			                  
+										  <td><%= @aluno.email %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td><strong>Turma</strong></td>			                  
+										  <td><%= @turma.designacao %></td>
+										</tr>
+										
+										<tr>
+										   <td></td>
+						                  <td><strong>Nº de utilizador</strong></td>						               		                  
+										  <td><%= @aluno.user_id %></td>
+										</tr>
+											
+										<tr>
+										   <td></td>
+						                  <td> <br> <br>
+										  <% if current_user.direc %>
+												<%= link_to image_tag("edit-icon24.png") + "Editar Aluno", edit_aluno_path(@aluno)  %>
+												<% end %></td>						               		                  
+										  <td> <br> <br>
+										  <%= link_to image_tag("back-icon32.png") + "Voltar", alunos_path  %></td>
+										</tr>		
+										 
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
 </div>
+
+

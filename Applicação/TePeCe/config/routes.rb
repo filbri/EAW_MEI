@@ -1,11 +1,34 @@
 Rails.application.routes.draw do
-  resources :mensagens
+
+  resources :turmas do
+    get 'statistics'
+    collection do
+      get 'statistics_index'
+    end
+  end
+
+  resources :disciplinas
+
+  resources :exercicios do
+    resources :resolucaos
+    resources :nota
+    collection do
+      get 'bydisc/:disciplina_id' => 'exercicios#bydisc', :as => "bydisc"
+    end
+  end
 
   resources :encarregados
 
   resources :profs
 
-  resources :alunos
+  resources :alunos do
+    get 'statistics'
+    collection do
+      get 'statistics_index'
+      get 'statistics_index/byturma/:turma_id' => 'alunos#stats_byturma', :as => "stats_byturma"
+      get 'byturma/:turma_id' => 'alunos#byturma', :as => "byturma"
+    end
+  end
 
   resources :direcs
 
@@ -18,7 +41,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  resources :users
+  get 'static_pages/statistics'
+
+  resources :users do
+    resources :mensagens
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

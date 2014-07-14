@@ -1,9 +1,19 @@
 <% provide(:title, @user.email) %>
+
+<br><br>
 <div class="row">
     <section>
       <h3>
-        <%= @user.email %>
+        <%= "Bem-vindo " + @user.user_name %>
       </h3>
     </section>
-
+    <% if @user.aluno %>
+		<%= render 'aluno' %>
+    <% elsif @user.prof %>
+		<%= render 'prof' %>
+    <% elsif @user.direc %>
+		<%= render 'direc' %>
+    <% elsif @user.encarregado %>
+		<%= render 'encarregado' %>
+    <% end %>
 </div>

@@ -1,0 +1,97 @@
+<h1></h1>
+<legend>Estatisticas do Aluno <b><%= @aluno.nome %></b></legend>
+
+<br><br>
+  <div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th>Descrição</th>
+						                  <th>Resultado</th>
+						                  <th></th>
+						                </tr>
+						              </thead>
+						             
+									  
+									  									
+										<tr>
+						                  <td></td>
+						                  <td>Média</td>			                  
+										  <td><%= @media %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Nota mais alta</td>			                  
+										  <td><%= @max %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Nota mais baixa</td>			                  
+										  <td><%= @min %></td>
+										</tr>
+																				
+										<tr>
+						                  <td></td>
+						                  <td>Notas negativas</td>			                  
+										  <td><%= @poss %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Notas positivas</td>			                  
+										  <td><%= @negs %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Exercícios resolvidos</td>			                  
+										  <td><%= @cmp %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Exercicios por resolver</td>			                  
+										  <td><%= @inc %></td>
+										</tr>
+										
+										
+										<tr>
+						                  <td></td>
+						                  <td>Melhor disciplina (média)</td>			                  
+										  <td><%= @best %></td>
+										</tr>
+										
+										<tr>
+						                  <td></td>
+						                  <td>Pior disciplina(média)</td>			                  
+										  <td><%= @worst %></td>
+										</tr>
+										
+										 
+										 
+										 
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
+ 
+
+<div class="links"> 
+   <br><br>
+  <h5>
+    <%= link_to "Voltar", statistics_index_alunos_path  %>
+  <h5>
+</div>

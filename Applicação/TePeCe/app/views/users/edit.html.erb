@@ -1,5 +1,6 @@
-<% provide(:title, "Edit user") %>
-<h1>Editar pefil</h1>
+<% provide(:title, "Editar utilizador") %>
+<h1></h1>
+<legend>Editar Perfil</legend>
 
 <div class="row">
   <div class="span6 offset3">
@@ -12,14 +13,11 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, "Confirme a password" %>
       <%= f.password_field :password_confirmation %>
 		<p> <p>
-      <%= f.submit "Gravar", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Gravar", class: "btn btn-primary" %>
     <% end %>
 
   </div>
 </div>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>

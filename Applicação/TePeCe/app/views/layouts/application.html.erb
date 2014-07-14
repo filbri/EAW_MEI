@@ -10,13 +10,35 @@
 </head>
 <body>
 	<%= render 'layouts/header' %>
+	
 	<div class="container">
       
 	  <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
 	  
-	  <%= yield %>
+	  <div class="container">
+		<div class="row">
+	 
+		<% if signed_in? %>	
+		<div class="col-md-2">
+	  		<%= render 'layouts/menulat' %>
+		</div>
+		
+		<div class="col-md-10">
+			<%= yield %>
+		</div>
+		
+		<% else %>
+			<div class="col-md-12">
+				<%= yield %>
+			</div>
+		<% end %>
+				
+		
+	  
+	  </div>
+	  </div>
 	  <%= render 'layouts/footer' %>
 	  
     </div>

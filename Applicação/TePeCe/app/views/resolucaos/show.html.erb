@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Resposta:</strong>
+  <%= @resolucao.resposta %>
+</p>
+
+<p>
+  <strong>Exercicio:</strong>
+  <%= @resolucao.exercicio_id %>
+</p>
+
+<%= link_to 'Alterar', edit_resolucao_path(@resolucao) %> |
+<%= link_to 'Voltar', resolucaos_path %>

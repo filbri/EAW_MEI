@@ -1,0 +1,91 @@
+
+
+<% if signed_in? %>
+<div  id="sidebar-wrapper">	
+<ul class="sidebar-nav">				
+	
+
+	<li>
+			<a> ...................</a>	
+	</li>
+	<% if not current_user.aluno %>	
+		<li id="fat-menu" class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				Estatisticas <b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<% if current_user.direc %>
+					<li><%= link_to "Gerais", static_pages_statistics_path %></li>
+				<% end %>
+				<% if not current_user.encarregado %>
+					<li><%= link_to "Turmas", statistics_index_turmas_path %></li>
+				<% end %>
+				<li><%= link_to "Alunos", statistics_index_alunos_path %></li>
+			</ul>
+		</li>
+	<% else %>
+
+	<li id="fat-menu" class="dropdown">
+			<li><%= link_to "Disciplinas", disciplinas_path %></li>
+		</li>
+		<%end%>
+	
+	
+
+	<% if not current_user.direc %>			
+	<li id="fat-menu" class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			Exercicio <b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			
+			<% if current_user.prof %>	
+			<li><%= link_to "Lancar Exercicio", new_exercicio_path %></li>
+			<%end%>
+			
+			<li><%= link_to "Ver Exercicios", exercicios_path%></li>
+		</ul>
+	</li>		
+	<%end%>
+	
+	<% if not current_user.aluno %>	
+	<li id="fat-menu" class="dropdown">
+		<%= link_to "Mensagens", user_mensagens_path(current_user) %>
+	</li>
+	<%end %>
+							
+	<% if current_user.direc or current_user.prof %>
+		<li id="fat-menu" class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				Utilizadores <b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<li><%= link_to "Alunos", alunos_path %></li>
+				<li><%= link_to "Enc.Educacao", encarregados_path%></li>
+				<li><%= link_to "Professores", profs_path %></li>
+				<li><%= link_to "Direcao", direcs_path %></li>	
+			</ul>
+		</li>
+		<li id="fat-menu" class="dropdown">
+			<li><%= link_to "Disciplinas", disciplinas_path %></li>
+		</li>
+		
+		<li id="fat-menu" class="dropdown">
+			<li><%= link_to "Turmas", turmas_path %></li>
+			
+		</li>
+	<% end %>
+	
+	<li>
+			<a> ...................</a>	
+	</li>
+	
+	</ul>
+	</ul>
+
+</div>	
+	
+	
+<% end %>
+
+

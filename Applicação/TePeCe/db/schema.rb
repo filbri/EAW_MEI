@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704202934) do
+ActiveRecord::Schema.define(version: 20140713151742) do
 
   create_table "alunos", force: true do |t|
     t.string   "nome"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20140704202934) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "turma_id"
+    t.integer  "encarregado_id"
   end
 
   create_table "direcs", force: true do |t|
@@ -59,17 +61,18 @@ ActiveRecord::Schema.define(version: 20140704202934) do
   end
 
   create_table "exercicios", force: true do |t|
-    t.string   "designacao"
+    t.string   "titulo"
     t.string   "enunciado"
-    t.date     "data"
-    t.integer  "disciplina_id"
+    t.integer  "aluno_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "disciplina_id"
+    t.integer  "prof_id"
   end
 
   create_table "mensagens", force: true do |t|
-    t.string   "remetente"
-    t.string   "destinatario"
+    t.integer  "remetente"
+    t.integer  "destinatario"
     t.string   "assunto"
     t.string   "mensagem"
     t.datetime "created_at"
@@ -97,9 +100,15 @@ ActiveRecord::Schema.define(version: 20140704202934) do
     t.datetime "updated_at"
   end
 
+  create_table "resolucaos", force: true do |t|
+    t.string   "resposta"
+    t.integer  "exercicio_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "turmas", force: true do |t|
     t.string   "designacao"
-    t.integer  "aluno_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

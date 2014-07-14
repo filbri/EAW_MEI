@@ -1,0 +1,30 @@
+
+
+<%= form_for(@turma) do |f| %>
+  <% if @turma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+
+      <ul>
+      <% @turma.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+	<div class="span6 offset3"> 
+  
+	  <div class="field">
+		<%= f.label :designacao %><br>
+		<%= f.text_field :designacao %>
+	  </div>
+	  <br>
+	  <div class="actions">
+		<%= f.submit "Gravar", class: "btn btn-primary"  %>
+	  </div>
+	</div>
+  </div>
+  
+<% end %>

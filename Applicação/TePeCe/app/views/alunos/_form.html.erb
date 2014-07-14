@@ -12,34 +12,69 @@
   <% end %>
 
  <div class="row">
-  <div class="span6 offset3">
-    <%= f.label :nome %><br>
+  <div class="span3 offset1">
+    
+	<div class="field">
+	<%= f.label :nome %>
     <%= f.text_field :nome %>
+	</div>
 
-    <%= f.label :dataNasc %><br>
+  <div class="field">
+    <%= f.label :encarregado_id %><br>
+	<%= f.collection_select :encarregado_id, @encarregados, :id, :nome %>
+  </div>
+
+	<div class="field">
+    <%= f.label :dataNasc %>
     <%= f.date_select :dataNasc %>
+	</div>
  
-    <%= f.label :nBI %><br>
+	<div class="field">
+    <%= f.label :nBI, "Nº BI/CC:" %>
     <%= f.number_field :nBI %>
+	</div>
  
-    <%= f.label :morada %><br>
+	<div class="field">
+    <%= f.label :morada %>
     <%= f.text_field :morada %>
+	</div>
   
-    <%= f.label :cp %><br>
+	<div class="field">
+    <%= f.label :cp, "Cod. Postal:" %>
     <%= f.text_field :cp %>
+	</div>
 
-    <%= f.label :localidade %><br>
+	<div class="field">
+    <%= f.label :localidade %>
     <%= f.text_field :localidade %>
+	</div>
 
-    <%= f.label :email %><br>
+	 <div class="field">
+	<%= f.label :email %>
     <%= f.text_field :email %>
+	</div>
 
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+	<div class="field">
+     <%= f.label :password %>
+     <%= f.password_field :password %>
+	 </div>
 
+	 <div class="field">
+     <%= f.label :password_confirmation, "Confirmation" %>
+     <%= f.password_field :password_confirmation %>
+	 </div>
+	
+  <div class="field">
+    <%= f.label :turma_id %><br>
+  <%= f.collection_select :turma_id, @turmas, :id, :designacao %>
+  </div>
+
+	<div class="field">
 		<div class="actions">
-			<%= f.submit "Gravar", class: "btn btn-large btn-primary" %>
+			<%= f.submit "Gravar", class: "btn btn-primary" %>
 		</div>
+	</div>		
+		
 	</div>
 </div>
 <% end %>

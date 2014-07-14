@@ -1,0 +1,64 @@
+
+<% if current_user.direc %>
+<h1></h1>
+<%= link_to image_tag("add-database-icon.png") + "Nova disciplina", new_disciplina_path %>
+<% end %>
+<br><br>
+<% if current_user.direc %>
+  <legend>Lista de Disciplinas</legend>
+<% else %>
+  <legend>Disciplina</legend>
+<% end %>
+
+<br><br>
+<div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th>Nome</th>
+						                  <th></th>
+						                  <th></th>
+						                </tr>
+						              </thead>
+						              
+									  
+									<% if current_user.direc %>
+									  <tbody>
+									   <% @disciplinas.each do |disciplina| %>
+						                <tr>
+						                  <td><%= disciplina.id %></td>
+						                  <td><%= disciplina.designacao %></td>
+										  <td><%= link_to image_tag("edit-icon24.png") +'Editar', edit_disciplina_path(disciplina) %></td>
+						                  
+										  <% if current_user.admin? %>
+										  <td><%= link_to image_tag("delete-icon24.png") + 'Apagar', disciplina, method: :delete, data: { confirm: 'Quer apagar esta turma?' } %></td>
+										  <% end %>
+										 
+										</tr>
+									   <% end %>
+						              </tbody>
+									<% else %>
+									<tbody>
+									   <% @disciplinas.each do |disciplina| %>
+						                <tr>
+						                  <td><%= disciplina.id %></td>
+						                  <td><%= link_to disciplina.designacao, bydisc_exercicios_path(disciplina) %></td>
+										</tr>
+									   <% end %>
+						              </tbody>
+									<% end %>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
+

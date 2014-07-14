@@ -1,27 +1,46 @@
-<p id="notice"><%= notice %></p>
-<h1>Mensagem </h1>
+<h1></h1>
+<legend><%= @mensagen.assunto %></legend>
 
 
-<table style="width:500px" height="250" border="0" align=center>
-   <tr>
-	<td><strong>Remetente:</strong></td> <td colspan="3"><%= @mensagen.remetente %></td>
-  </tr>
-  <tr>
-    <td><strong>Destinatario:</strong></td> <td colspan="3"><%= @mensagen.destinatario %></td>
-  </tr>
-  <tr>
-    <td><strong>Assunto:</strong></td> <td colspan="3"><%= @mensagen.assunto %></td>
-  </tr>
-  <tr>
-    <td><strong>Mensagem:</strong></td> <td colspan="3"><%= @mensagen.mensagem %></td>
-  </tr>
-</table>
-  
 
-<br>
-<br>
-<div class="links">
-<h5>
-<%= link_to 'Back', mensagens_path %>
-<h5>
+ <div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th></th>						                 
+						                </tr>
+						              </thead>
+						             
+									  
+									  <tbody>
+						                <tr>
+						                  <td></td>
+						                  <td><strong>De:</strong></strong></td>			                  
+										  <td><%= User.find(@mensagen.remetente).user_name %></td>
+										</tr>
+										<tr>
+						                  <td></td>
+						                  <td><strong>Mensagem:</strong></td>			                  
+										  <td><%= @mensagen.mensagem %></td>
+										</tr>	
+										<tr>
+										  <td> <br> <br> </td>
+										  <td> <br> <br>
+										  <%= link_to image_tag("back-icon32.png") + 'Voltar', user_mensagens_path(current_user) %></td>
+										</tr>
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
 </div>
+

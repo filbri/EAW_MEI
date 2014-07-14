@@ -1,4 +1,4 @@
-<%= form_for(@mensagen) do |f| %>
+<%= form_for @mensagen, url: new_user_mensagen_path(@user), html: { method: :put } do |f| %>
   <% if @mensagen.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@mensagen.errors.count, "error") %> prohibited this mensagen from being saved:</h2>
@@ -13,15 +13,11 @@
 
   
     <div class="row">
-	<div class="span6 offset3">
+	<div class="span3 offset1">
   
   <div class="field">
-    <%= f.label :remetente %><br>
-    <%= f.text_field :remetente %>
-  </div>
-  <div class="field">
     <%= f.label :destinatario %><br>
-    <%= f.text_field :destinatario %>
+    <%= f.collection_select :destinatario, @users, :id, :user_name %>
   </div>
   <div class="field">
     <%= f.label :assunto %><br>
@@ -32,7 +28,7 @@
     <%= f.text_area :mensagem,  placeholder: "Nova Mensagem..." %>
   </div>
   <div class="actions">
-    <%= f.submit "Enviar Mensagem", class: "btn btn-large btn-primary" %>
+    <%= f.submit "Enviar", class: "btn btn-primary" %>
   </div>
   
    </div>

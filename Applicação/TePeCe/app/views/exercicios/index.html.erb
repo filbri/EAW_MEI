@@ -1,0 +1,75 @@
+<h1></h1>
+<% if current_user.prof %>
+  <%= link_to image_tag("add-database-icon.png") + 'Novo exercicio', new_exercicio_path %>
+<% end %>
+<br>
+<br>
+
+<legend>Lista de Exercicios</legend>
+
+<div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                 <th>Titulo</th>
+										  <th>Disciplina</th>
+										  <% if not current_user.prof %>
+											<th>Professor</th>
+										  <% end %>
+										  <% if not current_user.aluno %>
+											<th>Aluno</th>
+										  <% end %>
+										  <th>Resolvido</th>
+										  <th>Nota</th>
+										  <th colspan="5"></th>
+						                </tr>
+						              </thead>
+									  
+									      <% @exercicios.each do |exercicio| %>
+											  <tr>
+												<td><%= exercicio.titulo %></td>
+												<td><%= link_to Disciplina.find(exercicio.disciplina_id).designacao, bydisc_exercicios_path(exercicio.disciplina_id) %></td>
+												<% if not current_user.prof %>
+												  <td><%= Prof.find(exercicio.prof_id).nome %></td>
+												<% end %>
+												<% if not current_user.aluno %>
+												  <td><%= Aluno.find(exercicio.aluno_id).nome %></td>
+												<% end %>
+												<% if exercicio.resolucao %>
+												  <td>Sim</td>
+												<% else %>
+												  <td>Nao</td>
+												<% end %>
+												<% if exercicio.nota %>
+												  <td><%= exercicio.nota.valor %></td>
+												<% else %>
+												  <td>N/A</td>
+												<% end %>
+												<td><%= link_to image_tag("search-icon24.png") + 'Ver', exercicio %></td>
+										<% if current_user.prof %>
+												<td> <%= link_to image_tag("edit-icon24.png") + 'Editar', edit_exercicio_path(exercicio) %></td>
+												<td> <%= link_to image_tag("delete-icon24.png")+'Retirar', exercicio, method: :delete, data: { confirm: 'Tem acerteza que quer retirar este exercicio?' } %></td>
+										<% end %>
+											  </tr>
+											<% end %>
+						              
+									  
+									
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
+
+<br>
+
+
+<%= link_to 'Voltar', disciplinas_path %>

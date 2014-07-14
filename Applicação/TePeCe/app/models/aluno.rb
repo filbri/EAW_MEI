@@ -1,5 +1,10 @@
 class Aluno < ActiveRecord::Base
 	belongs_to :user
-	validates :user_id, presence: true
+	has_many :exercios
+	has_many :notas
+	belongs_to :turma
+	belongs_to :encarregado
+	
+	
 	
 end

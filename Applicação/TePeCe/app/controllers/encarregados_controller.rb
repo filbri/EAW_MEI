@@ -26,12 +26,16 @@ class EncarregadosController < ApplicationController
   # POST /encarregados.json
   def create
     @encarregado = Encarregado.new(encarregado_params)
+	@user = User.new(user_params)
 
     respond_to do |format|
-      if @encarregado.save
-        format.html { redirect_to @encarregado, notice: 'Encarregado was successfully created.' }
-        format.json { render :show, status: :created, location: @encarregado }
-      else
+	  if @user.save
+		@encarregado.user_id = @user.id
+		if @encarregado.save
+			format.html { redirect_to @encarregado, notice: 'Encarregado was successfully created.' }
+			format.json { render :show, status: :created, location: @encarregado }
+		end
+	  else
         format.html { render :new }
         format.json { render json: @encarregado.errors, status: :unprocessable_entity }
       end
@@ -72,4 +76,10 @@ class EncarregadosController < ApplicationController
     def encarregado_params
       params.require(:encarregado).permit(:nome, :dataNasc, :nBI, :morada, :cp, :localidade, :email, :user_id)
     end
+	
+	def user_params
+      params.require(:encarregado).permit(:email, :password,
+                                   :password_confirmation)
+    end
+	
 end

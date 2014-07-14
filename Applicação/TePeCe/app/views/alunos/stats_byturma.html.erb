@@ -1,0 +1,21 @@
+<h1></h1>
+<legend>Estatisticas de alunos da Turma <%= @turma.designacao %></legend>
+
+
+<%= will_paginate %>
+
+<ul class="alunos">
+	<% @alunos.each do |aluno| %>
+	<li>
+		<b><%= aluno.nome %> </b>
+		<div>
+			<td><%= link_to 'Consultar estatisticas', aluno_statistics_path(aluno) %></td>
+		</div>
+    </li>
+	
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to 'Voltar', statistics_index_turmas_path %>

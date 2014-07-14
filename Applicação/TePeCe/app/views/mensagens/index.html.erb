@@ -1,25 +1,52 @@
-<h1>Caixa de Entrada</h1>
+<h1></h1>
+
+<div class="lists">
+		<%= link_to image_tag("message-icon.png") +' Nova Mensagen', new_user_mensagen_path(@user) %>
+</div>
 
 <br>
-<br>
-<div class="lists">
-	<h5>
-		<%= link_to 'Nova Mensagen', new_mensagen_path %>
-	<h5>
-</div
-<br>
-<br>
+<legend>Caixa de Entrada</legend>
 
 
 <%= will_paginate %>
 
-<ul class="mensagens">
-  <% @mensagens.each do |mensagen| %>
-    <li>
-      <%= link_to mensagen.assunto, mensagen %>
-    </li>
-  <% end %>
-</ul>
+<div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th>Remetente</th>
+						                  <th>Assunto</th>
+						                  <th></th>
+										  <th></th>
+						                </tr>
+						              </thead>
+						              
+									  
+									  
+									  <tbody>
+									   <% @mensagens.each do |mensagen| %>
+						                <tr>
+						                  <td><%= mensagen.id %></td>
+						                  <td><%= User.find(mensagen.remetente).user_name %></td>
+						                  <td><%= link_to mensagen.assunto, user_mensagen_path(@user, mensagen) %> </td>
+						                  <td><%= link_to image_tag("delete-icon24.png") + 'Apagar', user_mensagen_path(@user, mensagen), method: :delete, data: { confirm: 'Tem acerteza que quer apagar esta mensagem?' } %></td>
+										</tr>
+										 <% end %>
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
 
 <%= will_paginate %>
 

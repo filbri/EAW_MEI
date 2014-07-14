@@ -1,0 +1,23 @@
+<h1>Listagem de nota</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nota.each do |notum| %>
+      <tr>
+        <td><%= notum.valor %></td>
+        <td><%= link_to 'Ver', notum %></td>
+        <td><%= link_to 'Alterar', edit_notum_path(notum) %></td>
+        <td><%= link_to 'Apagar', notum, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

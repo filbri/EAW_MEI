@@ -1,0 +1,44 @@
+<%= form_for @nota, url: new_exercicio_notum_path(@exercicio), html: { method: :put } do |f| %>
+  <% if @nota.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nota.errors.count, "error") %> prohibited this notum from being saved:</h2>
+
+      <ul>
+      <% @nota.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="row">
+  <div class="span3 offset1">
+  <p>
+    <strong>Titulo:</strong>
+    <%= @exercicio.titulo %>
+  </p>
+
+  <p>
+    <strong>Enunciado:</strong>
+    <%= @exercicio.enunciado %>
+  </p>
+
+  <p>
+    <strong>Aluno:</strong>
+    <%= @exercicio.aluno.nome%>
+  </p>
+
+  <p><strong>Resolucao:</strong></p>
+  <p><%= @exercicio.resolucao.resposta %></p>
+
+  <div class="field">
+    <p><strong>Nota<br></strong></p>
+    <%= f.number_field :valor, :min => 1, :max => 20 %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Gravar", class: "btn btn-primary" %>
+  </div>
+</div>
+</div>  
+<% end %>

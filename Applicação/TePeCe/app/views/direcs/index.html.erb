@@ -1,21 +1,62 @@
-<h1>Membros da Direcão</h1>
+<h1></h1>
 
-<%= will_paginate %>
-
-<ul class="direcs">
-  <% @direcs.each do |direc| %>
-    <li>
-      <%= link_to direc.nome, direc %>
-    </li>
-  <% end %>
-</ul>
-
-<%= will_paginate %>
-
+<% if current_user.direc %>
+<div class="lists">
 <br>
-<br>
-<div class="links">
-<h5>
-<%= link_to 'Novo Membro', new_direc_path %>
-<h5>
+	<%= link_to image_tag("add-database-icon.png") + "Novo Membro", new_direc_path  %>
+<br><br><br><br>
 </div>
+<% end %>
+
+<legend>Membros da Direcção</legend>
+<br>
+<br>
+
+
+<%= will_paginate %>
+
+<div class="span9" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            
+                            <div class="block-content collapse in">
+                                <div class="span12">
+  									<table class="table">
+						              <thead>									
+										<tr>
+						                  <th>#</th>
+						                  <th>Nome</th>
+						                  <th></th>
+						                  <th></th>
+						                </tr>
+						              </thead>
+						              
+									  
+									  
+									  <tbody>
+									   <% @direcs.each do |direc| %>
+						                <tr>
+						                  <td><%= direc.id %></td>
+						                  <td><%= link_to direc.nome, direc %></td>
+						                  
+										  <% if current_user.direc %>
+										  <td><%= link_to image_tag("edit-icon24.png") +'Editar', edit_direc_path(direc) %></td>
+						                  
+										  <% if current_user.admin? %>
+										  <td><%= link_to image_tag("delete-icon24.png") + 'Apagar', direc, method: :delete, data: { confirm: 'Quer apagar esta turma?' } %></td>
+										  <% end %>
+										  <% end %>
+										</tr>
+										 <% end %>
+						              </tbody>
+						            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+					</div>
+</div>
+
+<%= will_paginate %>
+

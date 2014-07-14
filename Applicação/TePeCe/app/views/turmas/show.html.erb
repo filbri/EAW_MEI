@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Designacao:</strong>
+  <%= @turma.designacao %>
+</p>
+
+<%= link_to 'Alterar', edit_turma_path(@turma) %> |
+<%= link_to 'Voltar', turmas_path %>

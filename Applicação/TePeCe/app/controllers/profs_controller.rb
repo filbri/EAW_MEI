@@ -26,17 +26,21 @@ class ProfsController < ApplicationController
   # POST /profs.json
   def create
     @prof = Prof.new(prof_params)
+	@user = User.new(user_params)
 
     respond_to do |format|
-      if @prof.save
-        format.html { redirect_to @prof, notice: 'Prof was successfully created.' }
-        format.json { render :show, status: :created, location: @prof }
-      else
-        format.html { render :new }
-        format.json { render json: @prof.errors, status: :unprocessable_entity }
-      end
+	if @user.save
+		@prof.user_id = @user.id;
+		if @prof.save
+			format.html { redirect_to @prof, notice: 'Prof was successfully created.' }
+			format.json { render :show, status: :created, location: @prof }
+		end
+	else
+		format.html { render :new }
+		format.json { render json: @prof.errors, status: :unprocessable_entity }
     end
   end
+ end
 
   # PATCH/PUT /profs/1
   # PATCH/PUT /profs/1.json
@@ -71,5 +75,10 @@ class ProfsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def prof_params
       params.require(:prof).permit(:nome, :dataNasc, :nBI, :morada, :cp, :localidade, :email, :user_id)
+    end
+	
+	def user_params
+      params.require(:prof).permit(:email, :password,
+                                   :password_confirmation)
     end
 end
